@@ -16,12 +16,12 @@ resolvers ++= Seq(
   "Concurrent Maven Repo" at "http://conjars.org/repo/",
   "Spray Repository" at "http://repo.spray.cc/")
 
-assemblyMergeStrategy in assembly :=  {
+/*assemblyMergeStrategy in assembly :=  {
   case PathList("META-INF", xs @ _*) => MergeStrategy.discard
   case x => MergeStrategy.first
-}
+}*/
 
-/*assemblyMergeStrategy in assembly := {
+assemblyMergeStrategy in assembly := {
   case PathList("javax", "xml", xs @ _*) => MergeStrategy.last
   case PathList("org", "apache", xs @ _*) => MergeStrategy.last
   case PathList("com", "google", xs @ _*) => MergeStrategy.last
@@ -29,4 +29,4 @@ assemblyMergeStrategy in assembly :=  {
   case x =>
     val oldStrategy = (assemblyMergeStrategy in assembly).value
     oldStrategy(x)
-}*/
+}
