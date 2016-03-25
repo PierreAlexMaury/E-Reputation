@@ -116,7 +116,7 @@ object TwitterEReputation {
               .replaceAll(http,"")
               .replaceAll(emoji,"")
 
-            val tweetWords = tweetModified.split("[\\s:,;'.<>=+!?-/*\"]+")
+            val tweetWords = tweetModified.split("[\\s:,;'.<>=+!?\\-/*\"]+")
             for (index <- 0 to tweetWords.size-1){
               for (line <- Source.fromFile(stopWords).getLines()) {
                 if (line == tweetWords(index)) {
