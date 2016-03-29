@@ -2,10 +2,10 @@ lazy val root = (project in file(".")).settings(
   name := "E-Reputation",
   version := "1.0-SNAPSHOT",
   libraryDependencies ++= Seq(
-    "org.apache.spark"  % "spark-core_2.10"              % "1.6.0" % "provided",
+    "org.apache.spark"  % "spark-core_2.10"              % "1.6.0",
     "org.apache.spark"  % "spark-streaming-twitter_2.10" % "1.6.0",
     "org.apache.spark"  % "spark-sql_2.10"               % "1.6.0",
-    "org.apache.spark" % "spark-streaming_2.10" % "1.6.0" % "provided",
+    "org.apache.spark" % "spark-streaming_2.10" % "1.6.0",
     "it.nerdammer.bigdata" % "spark-hbase-connector_2.10" % "1.0.2",
     "joda-time" % "joda-time" % "2.9.2"
   )
