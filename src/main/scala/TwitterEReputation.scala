@@ -21,13 +21,15 @@ object twitterUtils {
   //HBase utils
   var id: String = ""
   val hbaseTwitterBaseDate: String = "twitter"
-  val columnFamilyTags: String = "tags"
+  val columnFamilyData: String = "data"
   val columnFamilyEval: String = "evaluation"
   val keySeparator: Char = ':'
 
   //Twitter hbase column
-  val tags: String = "tags"
-  val numberTags: String = "numberTags"
+  val columnPositive: String = "positive-words"
+  val columnNegative: String = "negative-words"
+  val columnNeutral: String = "neutral-words"
+  val columnEval: String = "eval(%)"
 
   /**
     * Function which returns the current date with the String format: yyyyMMddHHmm
@@ -35,7 +37,7 @@ object twitterUtils {
   def currentDate(): String = {
     val timestamp: Timestamp = new Timestamp(new DateTime().getMillis)
     val date = new Date(timestamp.getTime)
-    val simpleFormat = new SimpleDateFormat("yyyyMMddHHmm")
+    val simpleFormat = new SimpleDateFormat("yyyyMMddHHmmssSS")
     simpleFormat.format(date)
   }
 
@@ -137,7 +139,7 @@ object TwitterEReputation {
           println("The rdd is empty!")
         } else {
           println("----------------------------------------------------------------------------")
-          rdd.foreach(tweet => {
+          val toSave = rdd.map({ tweet =>
             val tweetModified = tweet
               //Delete all '\n'
               .replace("\n","")
@@ -177,8 +179,7 @@ object TwitterEReputation {
                 eval = BigDecimal(temp).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
               }
             }
-
-            println("tweet seq pos => " + seq_pos)
+            /*println("tweet seq pos => " + seq_pos)
             println("tweet seq neg => " + seq_neg)
             println("tweet seq neutral => " + seq_neutral)
 
@@ -186,22 +187,23 @@ object TwitterEReputation {
             println("tweet's eval => " + eval)
 
             val cleanedTweet = newTweet.mkString(" ")
-            println("tweet => "+ cleanedTweet)
-          })
+            println("tweet => "+ cleanedTweet)*/
+            (seq_pos,seq_neg,seq_neutral,eval)
+          }).cache()
 
-          /*val rddPart1 = rdd.map(s => (currentDate(), s._2))
+          toSave.map(s => (id+currentDate(), s._1.mkString(","), s._2.mkString(","), s._3.mkString(",")))
             .toHBaseTable(hbaseTwitterBaseDate)
-            .inColumnFamily(columnFamilyTags)
-            .toColumns(tags)
+            .inColumnFamily(columnFamilyData)
+            .toColumns(columnPositive,columnNegative,columnNeutral)
             .save()
-          println("tags saved in HBase")
+          println("data saved in HBase")
 
-          val rddPart2 = rdd.map(s => (currentDate(), s._1.toInt))
+          toSave.map(s => (id+currentDate(), s._4))
             .toHBaseTable(hbaseTwitterBaseDate)
             .inColumnFamily(columnFamilyEval)
-            .toColumns(numberTags)
+            .toColumns(columnEval)
             .save()
-          println("Number of tags saved in HBase")*/
+          println("eval saved in HBase")
         }
       })
       ssc.start()
