@@ -1,6 +1,6 @@
 import org.apache.spark.streaming.{Seconds, Duration, StreamingContext}
 import org.apache.spark.streaming.twitter._
-import org.apache.spark.SparkConf
+import org.apache.spark.{SparkContext, SparkConf}
 import org.apache.spark.serializer.KryoSerializer
 import it.nerdammer.spark.hbase._
 import java.text.SimpleDateFormat
@@ -8,12 +8,7 @@ import org.joda.time.DateTime
 import java.sql.{Date, Timestamp}
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
-import twitter4j.FilterQuery
 import twitterUtils._
-
-import scala.collection.Seq
-import scala.io.Source
-import scala.util.matching.Regex
 
 object twitterUtils {
 
@@ -24,14 +19,17 @@ object twitterUtils {
   val accessTokenSecret: String = "GBySX1YGXF156rorsH0MCY3DHWxrzEG6ywjIqOYCl6E9L"
 
   //HBase utils
+  var id: String = ""
   val hbaseTwitterBaseDate: String = "twitter"
-  val columnFamilyTags: String = "tags"
+  val columnFamilyData: String = "data"
   val columnFamilyEval: String = "evaluation"
   val keySeparator: Char = ':'
 
   //Twitter hbase column
-  val tags: String = "tags"
-  val numberTags: String = "numberTags"
+  val columnPositive: String = "positive-words"
+  val columnNegative: String = "negative-words"
+  val columnNeutral: String = "neutral-words"
+  val columnEval: String = "eval(%)"
 
   /**
     * Function which returns the current date with the String format: yyyyMMddHHmm
@@ -39,13 +37,20 @@ object twitterUtils {
   def currentDate(): String = {
     val timestamp: Timestamp = new Timestamp(new DateTime().getMillis)
     val date = new Date(timestamp.getTime)
-    val simpleFormat = new SimpleDateFormat("yyyyMMddHHmm")
+    val simpleFormat = new SimpleDateFormat("yyyyMMddHHmmssSS")
     simpleFormat.format(date)
+  }
+
+  object language extends Enumeration {
+    type language = Value
+    val english : String = "en"
+    val french : String = "fr"
+    val spanish : String = "es"
+    val portuguese : String = "pt"
   }
 }
 
 object TwitterEReputation {
-
   Logger.getLogger("org").setLevel(Level.ERROR)
   Logger.getLogger("akka").setLevel(Level.ERROR)
 
@@ -55,10 +60,10 @@ object TwitterEReputation {
   System.setProperty("twitter4j.oauth.accessTokenSecret", accessTokenSecret)
 
   def main(args: Array[String]) {
-
+    //New Spark Configuration
     val sparkConf = new SparkConf()
 
-    if (args.length == 3) {
+    if (args.length == 4) {
       if (args(0) == "yarn"){
         sparkConf
           .setAppName("TwitterEReputation")
@@ -79,74 +84,132 @@ object TwitterEReputation {
           //.set("spark.driver.extraClassPath", "/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar")
           //.set("spark.cores.max","6")
       }
-
-      val id = args(1)
-
-      val http = "http[^\\s]+"
-
-      val emoji = "[^\u0000-\uFFFF]"
-
-      val temp = args(2)
-
-      val filters = temp.split(",")
-
-      val stopWords = "stopWords.txt"
-
-      val ssc = new StreamingContext(sparkConf,Seconds(2))
-
+      //Id gives by the user for rowKey in Hbase
+      id = args(2)
+      //All words used to filter tweets (given by the user)
+      val filters = args(3).split(",")
+      //Language chosen by the user for the tweets
+      lazy val lang = args(1) match {
+        case "en" => language.english
+        case "fr" => language.french
+        case "es" => language.spanish
+        case "pt" => language.portuguese
+        case _ => language.english
+      }
+      //Filenames and selection according to the language chosen
+      var stopWords = ""
+      var pos_file = ""
+      var neg_file = ""
+      lang match {
+        case language.english =>
+          stopWords = "stopWordFiles/stopWord_En.txt"
+          pos_file = "posDict/posDict_En.txt"
+          neg_file = "negDict/negDict_En.txt"
+        case language.french =>
+          stopWords = "stopWordFiles/stopWord_Fr.txt"
+          pos_file = "posDict/posDict_Fr.txt"
+          neg_file = "negDict/negDict_Fr.txt"
+        case language.spanish =>
+          stopWords = "stopWordFiles/stopWord_Es.txt"
+          pos_file = "posDict/posDict_Es.txt"
+          neg_file = "negDict/negDict_Es.txt"
+        case language.portuguese =>
+          stopWords = "stopWordFiles/stopWord_Pt.txt"
+          pos_file = "posDict/posDict_Pt.txt"
+          neg_file = "negDict/negDict_Pt.txt"
+      }
+      //Definition of a new SparkContext with a given spark config
+      val sc = new SparkContext(sparkConf)
+      //Set of the different files, RDD cached
+      val pos_words = sc.textFile(pos_file).cache().collect().toSet
+      val neg_words = sc.textFile(neg_file).cache().collect().toSet
+      val stop_words = sc.textFile(stopWords).cache().collect().toSet
+      //Definition of a new StreamingContext with a batch interval of 2 seconds
+      val ssc = new StreamingContext(sc,Seconds(2))
+      //Definition of an input stream from Twitter where filters are applied
       val stream = TwitterUtils.createStream(ssc, None, filters)
-
-      val hashTags = stream.window(new Duration(10000), new Duration(10000))
-        .filter(_.getLang == "en")
+      //Original tweets in the given language for the last minute
+      val originalTweets = stream.window(new Duration(10000), new Duration(10000))
+        .filter(_.getLang == lang)
+        //tweets format to lower case
         .map(status => status.getText).map(_.toLowerCase)
-
-      /*val topCounts60 = hashTags.map((_, 1)).reduceByKey(_ + _)
-        .map { case (topic, count) => (count, topic) }
-        .transform(_.sortByKey(false)).cache()*/
-
-      // Print popular hashtags
-      hashTags.foreachRDD(rdd => {
+      //Treatment on each tweet
+      originalTweets.foreachRDD(rdd => {
         if (rdd.count() == 0) {
           println("The rdd is empty!")
         } else {
           println("----------------------------------------------------------------------------")
-          rdd.foreach(tweet => {
+          val toSave = rdd.map({ tweet =>
             val tweetModified = tweet
+              //Delete all '\n'
               .replace("\n","")
-              .replaceAll(http,"")
-              .replaceAll(emoji,"")
+              //Regexp to delete http... field in tweets
+              .replaceAll("http[^\\s]+","")
+              //Regexp to delete emojis in tweets
+              .replaceAll("[^\u0000-\uFFFF]","")
 
-            val tweetWords = tweetModified.split("[\\s:,;'.<>=+!?\\-/*\"]+")
-            for (index <- 0 to tweetWords.size-1){
-              for (line <- Source.fromFile(stopWords).getLines()) {
-                if (line == tweetWords(index)) {
-                  tweetWords(index) = ""
-                }
+            //Deleting stop characters
+            val tweetWords = tweetModified.split("[\\[\\]\\s:,;'.<>=“+‘’!?\\-/*@#|&()»❤⛽️️–✅\"]+")
+            //Deleting stop words
+            val newTweet = tweetWords.toList.filterNot(words => stop_words contains words)
+            //Catch positive words in tweets
+            val seq_pos = newTweet.toList.filter(pos => pos_words contains(pos)).toSeq
+            //Catch negative words in tweets
+            val seq_neg = newTweet.toList.filter(neg => neg_words contains(neg)).toSeq
+            //Catch neutral words in tweets
+            val seq_neutral = newTweet.toList.filterNot(pos => pos_words contains(pos)).filterNot(neg => neg_words contains(neg)).toSeq
+            //Calculation of the evaluation of each tweet
+            var eval : Double = 0
+            if (seq_pos.size > seq_neg.size) {
+              if (seq_pos.size == seq_neutral.size) {
+                eval = BigDecimal(50).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+              } else if (seq_neutral.size == 0) {
+                eval = BigDecimal(100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+              } else {
+                val temp = (seq_pos.size.toDouble / seq_neutral.size.toDouble) * 100
+                eval = BigDecimal(temp).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+              }
+            }else if(seq_pos.size < seq_neg.size) {
+              if (seq_neg.size == seq_neutral.size) {
+                eval = BigDecimal(-50).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+              } else if (seq_neutral.size == 0) {
+                eval = BigDecimal(-100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+              } else {
+                val temp = -(seq_neg.size.toDouble / seq_neutral.size.toDouble) * 100
+                eval = BigDecimal(temp).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
               }
             }
-            val cleanedTweet = tweetWords.mkString(" ")
-            println("tweet => "+ cleanedTweet)
-          })
+            /*println("tweet seq pos => " + seq_pos)
+            println("tweet seq neg => " + seq_neg)
+            println("tweet seq neutral => " + seq_neutral)
 
-          /*val rddPart1 = rdd.map(s => (currentDate(), s._2))
+            val size = seq_pos.size+seq_neg.size+seq_neutral.size
+            println("tweet's eval => " + eval)
+
+            val cleanedTweet = newTweet.mkString(" ")
+            println("tweet => "+ cleanedTweet)*/
+            (seq_pos,seq_neg,seq_neutral,eval)
+          }).cache()
+
+          toSave.map(s => (id+currentDate(), s._1.mkString(","), s._2.mkString(","), s._3.mkString(",")))
             .toHBaseTable(hbaseTwitterBaseDate)
-            .inColumnFamily(columnFamilyTags)
-            .toColumns(tags)
+            .inColumnFamily(columnFamilyData)
+            .toColumns(columnPositive,columnNegative,columnNeutral)
             .save()
-          println("tags saved in HBase")
+          println("data saved in HBase")
 
-          val rddPart2 = rdd.map(s => (currentDate(), s._1.toInt))
+          toSave.map(s => (id+currentDate(), s._4))
             .toHBaseTable(hbaseTwitterBaseDate)
             .inColumnFamily(columnFamilyEval)
-            .toColumns(numberTags)
+            .toColumns(columnEval)
             .save()
-          println("Number of tags saved in HBase")*/
+          println("eval saved in HBase")
         }
       })
       ssc.start()
       ssc.awaitTermination()
     } else {
-      println("Error: You should precise a type of launching, an id and a list of words")
+      println("Error: You should precise a type of launching, a language (en, fr, es, pt), an id and a list of words")
       System.exit(1)
     }
   }
