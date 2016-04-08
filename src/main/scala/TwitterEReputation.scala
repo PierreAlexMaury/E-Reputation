@@ -1,8 +1,12 @@
+import org.apache.hadoop.hbase.util.Bytes
+import org.apache.hadoop.hbase.{TableName, HBaseConfiguration}
+import org.apache.hadoop.hbase.client.ConnectionFactory
+import org.apache.hadoop.hbase.mapreduce.TableInputFormat
+import org.apache.hadoop.hbase.client.Put
 import org.apache.spark.streaming.{Seconds, Duration, StreamingContext}
 import org.apache.spark.streaming.twitter._
 import org.apache.spark.{SparkContext, SparkConf}
 import org.apache.spark.serializer.KryoSerializer
-import it.nerdammer.spark.hbase._
 import java.text.SimpleDateFormat
 import org.joda.time.DateTime
 import java.sql.{Date, Timestamp}
@@ -19,7 +23,6 @@ object twitterUtils {
   val accessTokenSecret: String = "GBySX1YGXF156rorsH0MCY3DHWxrzEG6ywjIqOYCl6E9L"
 
   //HBase utils
-  var id: String = ""
   val hbaseTwitterBaseDate: String = "twitter"
   val columnFamilyData: String = "data"
   val columnFamilyEval: String = "evaluation"
@@ -69,23 +72,22 @@ object TwitterEReputation {
           .setAppName("TwitterEReputation")
           .set("spark.serializer", classOf[KryoSerializer].getName)
           .setJars(Array("/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar"))
-          .setSparkHome("/root/spark-1.6.0/")
+          .setSparkHome("/root/spark-1.5.2-bin-hadoop2.6/")
           .set("spark.hbase.host", "frvm141:2181,frvm142:2181,frvm144:2181,frvm146:2181")
           .set("spark.driver.extraClassPath", "/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar")
       } else if (args(0) == "standalone"){
         sparkConf
           .setAppName("TwitterEReputation")
-          .setMaster("local[4]")
-          //.setMaster("spark://frvm141:7077,frvm142:7077")
+          .setMaster("spark://frvm141:7077,frvm142:7077")
           .set("spark.serializer", classOf[KryoSerializer].getName)
-          //.setJars(Array("/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar"))
-          //.setSparkHome("/root/spark-1.6.0/")
-          //.set("spark.hbase.host", "frvm141:2181,frvm142:2181,frvm144:2181,frvm146:2181")
-          //.set("spark.driver.extraClassPath", "/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar")
-          //.set("spark.cores.max","6")
+          .setJars(Array("/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar"))
+          .setSparkHome("/root/spark-1.5.2-bin-hadoop2.6/")
+          .set("spark.hbase.host", "frvm141:2181,frvm142:2181,frvm144:2181,frvm146:2181")
+          .set("spark.driver.extraClassPath", "/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar,/root/hbase-1.1.3/conf")
+          .set("spark.cores.max","3")
       }
       //Id gives by the user for rowKey in Hbase
-      id = args(2)
+      val id = args(2)
       //All words used to filter tweets (given by the user)
       val filters = args(3).split(",")
       //Language chosen by the user for the tweets
@@ -102,34 +104,34 @@ object TwitterEReputation {
       var neg_file = ""
       lang match {
         case language.english =>
-          stopWords = "stopWordFiles/stopWord_En.txt"
-          pos_file = "posDict/posDict_En.txt"
-          neg_file = "negDict/negDict_En.txt"
+          stopWords = "/nfs/stopWordFiles/stopWord_En.txt"
+          pos_file = "/nfs/posDict/posDict_En.txt"
+          neg_file = "/nfs//nfs/negDict/negDict_En.txt"
         case language.french =>
-          stopWords = "stopWordFiles/stopWord_Fr.txt"
-          pos_file = "posDict/posDict_Fr.txt"
-          neg_file = "negDict/negDict_Fr.txt"
+          stopWords = "/nfs/stopWordFiles/stopWord_Fr.txt"
+          pos_file = "/nfs/posDict/posDict_Fr.txt"
+          neg_file = "/nfs/negDict/negDict_Fr.txt"
         case language.spanish =>
-          stopWords = "stopWordFiles/stopWord_Es.txt"
-          pos_file = "posDict/posDict_Es.txt"
-          neg_file = "negDict/negDict_Es.txt"
+          stopWords = "/nfs/stopWordFiles/stopWord_Es.txt"
+          pos_file = "/nfs/posDict/posDict_Es.txt"
+          neg_file = "/nfs/negDict/negDict_Es.txt"
         case language.portuguese =>
-          stopWords = "stopWordFiles/stopWord_Pt.txt"
-          pos_file = "posDict/posDict_Pt.txt"
-          neg_file = "negDict/negDict_Pt.txt"
+          stopWords = "/nfs/stopWordFiles/stopWord_Pt.txt"
+          pos_file = "/nfs/posDict/posDict_Pt.txt"
+          neg_file = "/nfs/negDict/negDict_Pt.txt"
       }
       //Definition of a new SparkContext with a given spark config
       val sc = new SparkContext(sparkConf)
       //Set of the different files, RDD cached
-      val pos_words = sc.textFile(pos_file).cache().collect().toSet
-      val neg_words = sc.textFile(neg_file).cache().collect().toSet
-      val stop_words = sc.textFile(stopWords).cache().collect().toSet
+      val pos_words = sc.textFile("file://"+pos_file).cache().collect().toSet
+      val neg_words = sc.textFile("file://"+neg_file).cache().collect().toSet
+      val stop_words = sc.textFile("file://"+stopWords).cache().collect().toSet
       //Definition of a new StreamingContext with a batch interval of 2 seconds
-      val ssc = new StreamingContext(sc,Seconds(2))
+      val ssc = new StreamingContext(sc,Seconds(3))
       //Definition of an input stream from Twitter where filters are applied
       val stream = TwitterUtils.createStream(ssc, None, filters)
       //Original tweets in the given language for the last minute
-      val originalTweets = stream.window(new Duration(10000), new Duration(10000))
+      val originalTweets = stream.window(new Duration(30000), new Duration(30000))
         .filter(_.getLang == lang)
         //tweets format to lower case
         .map(status => status.getText).map(_.toLowerCase)
@@ -139,71 +141,62 @@ object TwitterEReputation {
           println("The rdd is empty!")
         } else {
           println("----------------------------------------------------------------------------")
-          val toSave = rdd.map({ tweet =>
-            val tweetModified = tweet
-              //Delete all '\n'
-              .replace("\n","")
-              //Regexp to delete http... field in tweets
-              .replaceAll("http[^\\s]+","")
-              //Regexp to delete emojis in tweets
-              .replaceAll("[^\u0000-\uFFFF]","")
+          rdd.foreachPartition(iteration => {
+            val config = HBaseConfiguration.create()
+            config.set(TableInputFormat.INPUT_TABLE, hbaseTwitterBaseDate)
+            val clusterConnection = ConnectionFactory.createConnection(config)
+            val table = clusterConnection.getTable(TableName.valueOf(hbaseTwitterBaseDate))
+            iteration.foreach(tweet => {
+              val tweetModified = tweet
+                //Delete all '\n'
+                .replace("\n", "")
+                //Regexp to delete http... field in tweets
+                .replaceAll("http[^\\s]+", "")
+                //Regexp to delete emojis in tweets
+                .replaceAll("[^\u0000-\uFFFF]", "")
 
-            //Deleting stop characters
-            val tweetWords = tweetModified.split("[\\[\\]\\s:,;'.<>=“+‘’!?\\-/*@#|&()»❤⛽️️–✅\"]+")
-            //Deleting stop words
-            val newTweet = tweetWords.toList.filterNot(words => stop_words contains words)
-            //Catch positive words in tweets
-            val seq_pos = newTweet.toList.filter(pos => pos_words contains(pos)).toSeq
-            //Catch negative words in tweets
-            val seq_neg = newTweet.toList.filter(neg => neg_words contains(neg)).toSeq
-            //Catch neutral words in tweets
-            val seq_neutral = newTweet.toList.filterNot(pos => pos_words contains(pos)).filterNot(neg => neg_words contains(neg)).toSeq
-            //Calculation of the evaluation of each tweet
-            var eval : Double = 0
-            if (seq_pos.size > seq_neg.size) {
-              if (seq_pos.size == seq_neutral.size) {
-                eval = BigDecimal(50).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
-              } else if (seq_neutral.size == 0) {
-                eval = BigDecimal(100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
-              } else {
-                val temp = (seq_pos.size.toDouble / seq_neutral.size.toDouble) * 100
-                eval = BigDecimal(temp).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+              //Deleting stop characters
+              val tweetWords = tweetModified.split("[\\[\\]\\s:,;'.<>=“+‘’!?\\-/*@#|&()»❤⛽️️–✅\"]+")
+              //Deleting stop words
+              val newTweet = tweetWords.toList.filterNot(words => stop_words contains words)
+              //Catch positive words in tweets
+              val seq_pos = newTweet.toList.filter(pos => pos_words contains (pos)).toSeq
+              //Catch negative words in tweets
+              val seq_neg = newTweet.toList.filter(neg => neg_words contains (neg)).toSeq
+              //Catch neutral words in tweets
+              val seq_neutral = newTweet.toList.filterNot(pos => pos_words contains (pos)).filterNot(neg => neg_words contains (neg)).toSeq
+              //Calculation of the evaluation of each tweet
+              var eval: Double = 0
+              if (seq_pos.size > seq_neg.size) {
+                if (seq_pos.size == seq_neutral.size) {
+                  eval = BigDecimal(50).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+                } else if (seq_neutral.size == 0) {
+                  eval = BigDecimal(100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+                } else {
+                  val temp = (seq_pos.size.toDouble / seq_neutral.size.toDouble) * 100
+                  eval = BigDecimal(temp).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+                }
+              } else if (seq_pos.size < seq_neg.size) {
+                if (seq_neg.size == seq_neutral.size) {
+                  eval = BigDecimal(-50).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+                } else if (seq_neutral.size == 0) {
+                  eval = BigDecimal(-100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
+                } else {
+                  val temp = -(seq_neg.size.toDouble / seq_neutral.size.toDouble) * 100
+                  eval = BigDecimal(temp).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble 
+                }
               }
-            }else if(seq_pos.size < seq_neg.size) {
-              if (seq_neg.size == seq_neutral.size) {
-                eval = BigDecimal(-50).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
-              } else if (seq_neutral.size == 0) {
-                eval = BigDecimal(-100).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
-              } else {
-                val temp = -(seq_neg.size.toDouble / seq_neutral.size.toDouble) * 100
-                eval = BigDecimal(temp).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
-              }
-            }
-            /*println("tweet seq pos => " + seq_pos)
-            println("tweet seq neg => " + seq_neg)
-            println("tweet seq neutral => " + seq_neutral)
-
-            val size = seq_pos.size+seq_neg.size+seq_neutral.size
-            println("tweet's eval => " + eval)
-
-            val cleanedTweet = newTweet.mkString(" ")
-            println("tweet => "+ cleanedTweet)*/
-            (seq_pos,seq_neg,seq_neutral,eval)
-          }).cache()
-
-          toSave.map(s => (id+currentDate(), s._1.mkString(","), s._2.mkString(","), s._3.mkString(",")))
-            .toHBaseTable(hbaseTwitterBaseDate)
-            .inColumnFamily(columnFamilyData)
-            .toColumns(columnPositive,columnNegative,columnNeutral)
-            .save()
-          println("data saved in HBase")
-
-          toSave.map(s => (id+currentDate(), s._4))
-            .toHBaseTable(hbaseTwitterBaseDate)
-            .inColumnFamily(columnFamilyEval)
-            .toColumns(columnEval)
-            .save()
-          println("eval saved in HBase")
+              val p = new Put(Bytes.toBytes(id + currentDate()))
+              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnPositive), seq_pos.mkString(" ").getBytes("ISO-8859-1"))
+              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnNegative), seq_neg.mkString(" ").getBytes("ISO-8859-1"))
+              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnNeutral), seq_neutral.mkString(" ").getBytes("ISO-8859-1"))
+              p.addColumn(Bytes.toBytes(columnFamilyEval), Bytes.toBytes(columnEval), Bytes.toBytes(eval.toString))
+              table.put(p)
+            })
+            table.close()
+            clusterConnection.close()
+          })
+          println("Data saved in Hbase")
         }
       })
       ssc.start()

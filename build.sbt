@@ -2,11 +2,25 @@ lazy val root = (project in file(".")).settings(
   name := "E-Reputation",
   version := "1.0-SNAPSHOT",
   libraryDependencies ++= Seq(
-    "org.apache.spark"  % "spark-core_2.10"              % "1.6.0",
+    "org.apache.spark"  % "spark-core_2.10"              % "1.5.2",
     "org.apache.spark"  % "spark-streaming-twitter_2.10" % "1.6.0",
-    "org.apache.spark"  % "spark-sql_2.10"               % "1.6.0",
-    "org.apache.spark" % "spark-streaming_2.10" % "1.6.0",
-    "it.nerdammer.bigdata" % "spark-hbase-connector_2.10" % "1.0.2",
+    "org.apache.spark"  % "spark-sql_2.10"               % "1.5.2",
+    "org.apache.spark" % "spark-streaming_2.10" % "1.5.2",
+    "org.apache.hbase" % "hbase-client" % "1.1.3" excludeAll(
+      ExclusionRule(organization = "javax.servlet", name="javax.servlet-api"),
+      ExclusionRule(organization = "org.mortbay.jetty", name="jetty"),
+      ExclusionRule(organization = "org.mortbay.jetty", name="servlet-api-2.5")
+      ),
+    "org.apache.hbase" % "hbase-common" % "1.1.3" excludeAll(
+      ExclusionRule(organization = "javax.servlet", name="javax.servlet-api"),
+      ExclusionRule(organization = "org.mortbay.jetty", name="jetty"),
+      ExclusionRule(organization = "org.mortbay.jetty", name="servlet-api-2.5")
+      ),
+    "org.apache.hbase" % "hbase-server" % "1.1.3" excludeAll(
+      ExclusionRule(organization = "javax.servlet", name="javax.servlet-api"),
+      ExclusionRule(organization = "org.mortbay.jetty", name="jetty"),
+      ExclusionRule(organization = "org.mortbay.jetty", name="servlet-api-2.5")
+      ),
     "joda-time" % "joda-time" % "2.9.2"
   )
 )
