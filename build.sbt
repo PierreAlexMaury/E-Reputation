@@ -21,6 +21,7 @@ lazy val root = (project in file(".")).settings(
       ExclusionRule(organization = "org.mortbay.jetty", name="jetty"),
       ExclusionRule(organization = "org.mortbay.jetty", name="servlet-api-2.5")
       ),
+    "it.nerdammer.bigdata" % "spark-hbase-connector_2.10" % "1.0.2",
     "joda-time" % "joda-time" % "2.9.2"
   )
 )

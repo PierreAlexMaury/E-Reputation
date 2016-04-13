@@ -34,6 +34,7 @@ object twitterUtils {
   val columnNeutral: String = "neutral-words"
   val columnEval: String = "eval(%)"
 
+
   /**
     * Function which returns the current date with the String format: yyyyMMddHHmm
     */
@@ -73,16 +74,16 @@ object TwitterEReputation {
           .set("spark.serializer", classOf[KryoSerializer].getName)
           .setJars(Array("/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar"))
           .setSparkHome("/root/spark-1.5.2-bin-hadoop2.6/")
-          .set("spark.hbase.host", "frvm141:2181,frvm142:2181,frvm144:2181,frvm146:2181")
-          .set("spark.driver.extraClassPath", "/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar")
+          .set("spark.hbase.host", "frvm141:2181,frvm142:2181,frvm143:2181,frvm144:2181")
+          .set("spark.driver.extraClassPath", "/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar,/root/hbase-1.1.3/conf")
       } else if (args(0) == "standalone"){
         sparkConf
           .setAppName("TwitterEReputation")
-          .setMaster("spark://frvm141:7077,frvm142:7077")
+          .setMaster("spark://frvm141:7076,frvm142:7076")
           .set("spark.serializer", classOf[KryoSerializer].getName)
           .setJars(Array("/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar"))
           .setSparkHome("/root/spark-1.5.2-bin-hadoop2.6/")
-          .set("spark.hbase.host", "frvm141:2181,frvm142:2181,frvm144:2181,frvm146:2181")
+          .set("spark.hbase.host", "frvm141:2181,frvm142:2181,frvm143:2181,frvm144:2181")
           .set("spark.driver.extraClassPath", "/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar,/root/hbase-1.1.3/conf")
           .set("spark.cores.max","3")
       }
@@ -186,10 +187,11 @@ object TwitterEReputation {
                   eval = BigDecimal(temp).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble 
                 }
               }
+              //Saving of each tweet (seq_pos,seq_neg,eval) in Hbase
               val p = new Put(Bytes.toBytes(id + currentDate()))
-              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnPositive), seq_pos.mkString(" ").getBytes("ISO-8859-1"))
-              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnNegative), seq_neg.mkString(" ").getBytes("ISO-8859-1"))
-              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnNeutral), seq_neutral.mkString(" ").getBytes("ISO-8859-1"))
+              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnPositive), seq_pos.mkString(",").getBytes("ISO-8859-1"))
+              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnNegative), seq_neg.mkString(",").getBytes("ISO-8859-1"))
+              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnNeutral), seq_neutral.mkString(",").getBytes("ISO-8859-1"))
               p.addColumn(Bytes.toBytes(columnFamilyEval), Bytes.toBytes(columnEval), Bytes.toBytes(eval.toString))
               table.put(p)
             })
