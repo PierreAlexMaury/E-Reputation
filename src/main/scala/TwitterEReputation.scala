@@ -28,21 +28,35 @@ object twitterUtils {
   val columnFamilyEval: String = "evaluation"
   val keySeparator: Char = ':'
 
-  //Twitter hbase column
+  //Twitter HBase column
+  val columnDate: String = "date"
   val columnPositive: String = "positive-words"
   val columnNegative: String = "negative-words"
   val columnNeutral: String = "neutral-words"
   val columnEval: String = "eval(%)"
 
+  //currentDate() utils
+  val min: String = "min"
+  val ms: String = "ms"
 
   /**
     * Function which returns the current date with the String format: yyyyMMddHHmm
     */
-  def currentDate(): String = {
-    val timestamp: Timestamp = new Timestamp(new DateTime().getMillis)
-    val date = new Date(timestamp.getTime)
-    val simpleFormat = new SimpleDateFormat("yyyyMMddHHmmssSS")
-    simpleFormat.format(date)
+  def currentDate(mode: String): String = {
+    if (mode == ms){
+      val timestamp: Timestamp = new Timestamp(new DateTime().getMillis)
+      val date = new Date(timestamp.getTime)
+      val simpleFormat = new SimpleDateFormat("yyyyMMddHHmmssSS")
+      simpleFormat.format(date)
+    }else if (mode == min){
+      val timestamp: Timestamp = new Timestamp(new DateTime().getMillis)
+      val date = new Date(timestamp.getTime)
+      val simpleFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm")
+      simpleFormat.format(date)
+    }else{
+      System.exit(1)
+      "Bad argument for currentDate()"
+    }
   }
 
   object language extends Enumeration {
@@ -187,8 +201,9 @@ object TwitterEReputation {
                   eval = BigDecimal(temp).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble 
                 }
               }
-              //Saving of each tweet (seq_pos,seq_neg,eval) in Hbase
-              val p = new Put(Bytes.toBytes(id + currentDate()))
+              //Saving of each tweet (seq_pos,seq_neg,eval) in HBase
+              val p = new Put(Bytes.toBytes(id + currentDate(ms)))
+              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnDate), Bytes.toBytes(currentDate(min)))
               p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnPositive), seq_pos.mkString(",").getBytes("ISO-8859-1"))
               p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnNegative), seq_neg.mkString(",").getBytes("ISO-8859-1"))
               p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnNeutral), seq_neutral.mkString(",").getBytes("ISO-8859-1"))
@@ -198,7 +213,7 @@ object TwitterEReputation {
             table.close()
             clusterConnection.close()
           })
-          println("Data saved in Hbase")
+          println("Data saved in HBase")
         }
       })
       ssc.start()

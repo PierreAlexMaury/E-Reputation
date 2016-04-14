@@ -23,7 +23,8 @@ object CalculReputation {
           .setJars(Array("/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar"))
           .setSparkHome("/root/spark-1.5.2-bin-hadoop2.6/")
           .set("spark.hbase.host", "frvm141:2181,frvm142:2181,frvm143:2181,frvm144:2181")
-          .set("spark.driver.extraClassPath", "/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar,/root/hbase-1.1.3/conf")
+          .set("spark.driver.extraClassPath", "/root/E-Reputation/target/scala-2.10/" +
+            "E-Reputation-assembly-1.0-SNAPSHOT.jar,/root/hbase-1.1.3/conf")
       } else if (args(0) == "standalone"){
         sparkConf
           .setAppName("CalculReputation")
@@ -32,14 +33,25 @@ object CalculReputation {
           .setJars(Array("/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar"))
           .setSparkHome("/root/spark-1.5.2-bin-hadoop2.6/")
           .set("spark.hbase.host", "frvm141:2181,frvm142:2181,frvm143:2181,frvm144:2181")
-          .set("spark.driver.extraClassPath", "/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar,/root/hbase-1.1.3/conf")
+          .set("spark.driver.extraClassPath", "/root/E-Reputation/target/scala-2.10/" +
+            "E-Reputation-assembly-1.0-SNAPSHOT.jar,/root/hbase-1.1.3/conf")
           .set("spark.cores.max","3")
       }
 
       //Definition of a new SparkContext with a given spark config
       val sc = new SparkContext(sparkConf)
       //Format the result, with a class
-      case class evaluationResult(top5Pos: Seq[(String,Int)], top5Neg: Seq[(String,Int)], eval: Double)
+      case class evaluationResult(top5Pos: Seq[(String,Int)], top5Neg: Seq[(String,Int)], eval: Double, startDate:
+        String, stopDate: String)
+
+      val dateRDD = sc.hbaseTable[String](hbaseTwitterBaseDate)
+        .select(columnDate)
+        .inColumnFamily(columnFamilyData)
+        .map(elem => elem)
+        .cache()
+
+      val startStopDate = (dateRDD.min(),dateRDD.max())
+
       //Select all the positive words of all tweets, format: RDD[String]
       val posWordRDD = sc.hbaseTable[String](hbaseTwitterBaseDate)
         .select(columnPositive)
@@ -84,8 +96,9 @@ object CalculReputation {
       val evaluation = evalRDD.reduce((a, b) => a + b)/total
 
       //Write the result as a evaluationResult object
-      val result = evaluationResult(top5WordPos,top5WordNeg,evaluation)
-      val json = ("top5Pos" -> result.top5Pos)~("top5Neg" -> result.top5Neg)~("evaluation" -> result.eval)
+      val result = evaluationResult(top5WordPos,top5WordNeg,evaluation,startStopDate._1,startStopDate._2)
+      val json = ("top5Pos" -> result.top5Pos)~("top5Neg" -> result.top5Neg)~("evaluation"
+        -> result.eval)~("startDate" -> result.startDate)~("stopDate" -> result.stopDate)
 
       //Print the Json result
       println(compact(render(json)))
