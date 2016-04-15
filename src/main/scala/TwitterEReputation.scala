@@ -1,16 +1,17 @@
-import org.apache.hadoop.hbase.util.Bytes
-import org.apache.hadoop.hbase.{TableName, HBaseConfiguration}
-import org.apache.hadoop.hbase.client.ConnectionFactory
-import org.apache.hadoop.hbase.mapreduce.TableInputFormat
-import org.apache.hadoop.hbase.client.Put
 import org.apache.spark.streaming.{Seconds, Duration, StreamingContext}
-import org.apache.spark.streaming.twitter._
+import org.apache.hadoop.hbase.{TableName, HBaseConfiguration}
+import org.apache.hadoop.hbase.mapreduce.TableInputFormat
+import org.apache.hadoop.hbase.client.ConnectionFactory
 import org.apache.spark.{SparkContext, SparkConf}
 import org.apache.spark.serializer.KryoSerializer
+import org.apache.spark.streaming.twitter._
+import org.apache.hadoop.hbase.util.Bytes
+import org.apache.hadoop.hbase.client.Put
+import java.io.{File, PrintWriter}
 import java.text.SimpleDateFormat
-import org.joda.time.DateTime
 import java.sql.{Date, Timestamp}
 import org.apache.log4j.Logger
+import org.joda.time.DateTime
 import org.apache.log4j.Level
 import twitterUtils._
 
@@ -101,6 +102,8 @@ object TwitterEReputation {
           .set("spark.driver.extraClassPath", "/root/E-Reputation/target/scala-2.10/E-Reputation-assembly-1.0-SNAPSHOT.jar,/root/hbase-1.1.3/conf")
           .set("spark.cores.max","3")
       }
+      //Write the keywords in a file
+      new PrintWriter(new File("/nfs/keyWords.txt")){write(args(3).replace(',','\n')+"\n");close()}
       //Id gives by the user for rowKey in Hbase
       val id = args(2)
       //All words used to filter tweets (given by the user)

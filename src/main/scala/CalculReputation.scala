@@ -1,10 +1,10 @@
 import org.apache.spark.{SparkContext, SparkConf}
 import org.apache.spark.serializer.KryoSerializer
+import org.json4s.jackson.JsonMethods._
 import it.nerdammer.spark.hbase._
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
 import org.json4s.JsonDSL._
-import org.json4s.jackson.JsonMethods._
 import twitterUtils._
 
 object CalculReputation {
@@ -44,12 +44,14 @@ object CalculReputation {
       case class evaluationResult(top5Pos: Seq[(String,Int)], top5Neg: Seq[(String,Int)], eval: Double, startDate:
         String, stopDate: String)
 
+      //Select all the date of all tweets
       val dateRDD = sc.hbaseTable[String](hbaseTwitterBaseDate)
         .select(columnDate)
         .inColumnFamily(columnFamilyData)
         .map(elem => elem)
         .cache()
 
+      //Select the starting/stopping saving date
       val startStopDate = (dateRDD.min(),dateRDD.max())
 
       //Select all the positive words of all tweets, format: RDD[String]
