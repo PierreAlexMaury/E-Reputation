@@ -124,7 +124,7 @@ object TwitterEReputation {
         case language.english =>
           stopWords = "/nfs/stopWordFiles/stopWord_En.txt"
           pos_file = "/nfs/posDict/posDict_En.txt"
-          neg_file = "/nfs//nfs/negDict/negDict_En.txt"
+          neg_file = "/nfs/negDict/negDict_En.txt"
         case language.french =>
           stopWords = "/nfs/stopWordFiles/stopWord_Fr.txt"
           pos_file = "/nfs/posDict/posDict_Fr.txt"
