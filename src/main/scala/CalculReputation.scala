@@ -1,6 +1,7 @@
 import org.apache.spark.{SparkContext, SparkConf}
 import org.apache.spark.serializer.KryoSerializer
 import org.json4s.jackson.JsonMethods._
+import java.io.{File, PrintWriter}
 import it.nerdammer.spark.hbase._
 import org.apache.log4j.Logger
 import org.apache.log4j.Level
@@ -96,14 +97,15 @@ object CalculReputation {
       //Calcul the global Reputation (average of all tweet evaluation)
       val total = evalRDD.count()
       val evaluation = evalRDD.reduce((a, b) => a + b)/total
+      val evaluation_truncated = BigDecimal(evaluation).setScale(2, BigDecimal.RoundingMode.HALF_UP).toDouble
 
       //Write the result as a evaluationResult object
-      val result = evaluationResult(top5WordPos,top5WordNeg,evaluation,startStopDate._1,startStopDate._2)
+      val result = evaluationResult(top5WordPos,top5WordNeg,evaluation_truncated,startStopDate._1,startStopDate._2)
       val json = ("top5Pos" -> result.top5Pos)~("top5Neg" -> result.top5Neg)~("evaluation"
         -> result.eval)~("startDate" -> result.startDate)~("stopDate" -> result.stopDate)
 
       //Print the Json result
-      println(compact(render(json)))
+      new PrintWriter(new File("/nfs/results.txt")){write(compact(render(json)));close()}
 
     } else {
       println("Error: You should precise a type of launching")
