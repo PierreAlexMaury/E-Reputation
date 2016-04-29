@@ -207,9 +207,9 @@ object TwitterEReputation {
               //Saving of each tweet (seq_pos,seq_neg,eval) in HBase
               val p = new Put(Bytes.toBytes(id + currentDate(ms)))
               p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnDate), Bytes.toBytes(currentDate(min)))
-              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnPositive), seq_pos.mkString(",").getBytes("ISO-8859-1"))
-              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnNegative), seq_neg.mkString(",").getBytes("ISO-8859-1"))
-              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnNeutral), seq_neutral.mkString(",").getBytes("ISO-8859-1"))
+              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnPositive), seq_pos.mkString(",").getBytes("UTF-8"))
+              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnNegative), seq_neg.mkString(",").getBytes("UTF-8"))
+              p.addColumn(Bytes.toBytes(columnFamilyData), Bytes.toBytes(columnNeutral), seq_neutral.mkString(",").getBytes("UTF-8"))
               p.addColumn(Bytes.toBytes(columnFamilyEval), Bytes.toBytes(columnEval), Bytes.toBytes(eval.toString))
               table.put(p)
             })
