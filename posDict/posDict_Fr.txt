@@ -247,6 +247,7 @@ clair
 claire
 clairement
 close
+cloud
 coeur
 cohérence
 comme
@@ -1100,6 +1101,7 @@ répit
 réputation
 réputé
 résolument
+résolution
 résultat
 rétractable
 réussi

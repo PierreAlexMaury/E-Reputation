@@ -312,6 +312,7 @@ charmer
 choice
 clean
 cleanliness
+cloud
 comfort
 comfortable
 comforting
@@ -329,10 +330,12 @@ commitment
 communication
 community
 compassion
+computing
 compassionate
 competent
 competence
 competency
+cognitive
 concentration
 confident
 confidence
