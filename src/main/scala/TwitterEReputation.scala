@@ -41,7 +41,7 @@ object twitterUtils {
   val ms: String = "ms"
 
   /**
-    * Function which returns the current date with the String format: yyyyMMddHHmm
+    * Function which returns the current date with the String format: yyyyMMddHHmmssSS or yyyy-MM-d-HH-mm
     */
   def currentDate(mode: String): String = {
     if (mode == ms){
@@ -103,7 +103,7 @@ object TwitterEReputation {
           .set("spark.cores.max","3")
       }
       //Write the keywords in a file
-      new PrintWriter(new File("/nfs/keyWords.txt")){write(args(3).replace(',','\n')+"\n");close()}
+      new PrintWriter(new File("/gpfs-fpo/keyWords.txt")){write(args(3).replace(',','\n')+"\n");close()}
       //Id gives by the user for rowKey in Hbase
       val id = args(2)
       //All words used to filter tweets (given by the user)
@@ -122,21 +122,21 @@ object TwitterEReputation {
       var neg_file = ""
       lang match {
         case language.english =>
-          stopWords = "/nfs/stopWordFiles/stopWord_En.txt"
-          pos_file = "/nfs/posDict/posDict_En.txt"
-          neg_file = "/nfs/negDict/negDict_En.txt"
+          stopWords = "/gpfs-fpo/stopWordFiles/stopWord_En.txt"
+          pos_file = "/gpfs-fpo/posDict/posDict_En.txt"
+          neg_file = "/gpfs-fpo/negDict/negDict_En.txt"
         case language.french =>
-          stopWords = "/nfs/stopWordFiles/stopWord_Fr.txt"
-          pos_file = "/nfs/posDict/posDict_Fr.txt"
-          neg_file = "/nfs/negDict/negDict_Fr.txt"
+          stopWords = "/gpfs-fpo/stopWordFiles/stopWord_Fr.txt"
+          pos_file = "/gpfs-fpo/posDict/posDict_Fr.txt"
+          neg_file = "/gpfs-fpo/negDict/negDict_Fr.txt"
         case language.spanish =>
-          stopWords = "/nfs/stopWordFiles/stopWord_Es.txt"
-          pos_file = "/nfs/posDict/posDict_Es.txt"
-          neg_file = "/nfs/negDict/negDict_Es.txt"
+          stopWords = "/gpfs-fpo/stopWordFiles/stopWord_Es.txt"
+          pos_file = "/gpfs-fpo/posDict/posDict_Es.txt"
+          neg_file = "/gpfs-fpo/negDict/negDict_Es.txt"
         case language.portuguese =>
-          stopWords = "/nfs/stopWordFiles/stopWord_Pt.txt"
-          pos_file = "/nfs/posDict/posDict_Pt.txt"
-          neg_file = "/nfs/negDict/negDict_Pt.txt"
+          stopWords = "/gpfs-fpo/stopWordFiles/stopWord_Pt.txt"
+          pos_file = "/gpfs-fpo/posDict/posDict_Pt.txt"
+          neg_file = "/gpfs-fpo/negDict/negDict_Pt.txt"
       }
       //Definition of a new SparkContext with a given spark config
       val sc = new SparkContext(sparkConf)
