@@ -474,7 +474,7 @@ exemplaire
 exercicen
 expansif
 experte
-exploiter
+exploit
 expression
 expressivité
 expérience

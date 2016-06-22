@@ -39,6 +39,7 @@ object twitterUtils {
   //currentDate() utils
   val min: String = "min"
   val ms: String = "ms"
+  val sec: String = "sec"
 
   /**
     * Function which returns the current date with the String format: yyyyMMddHHmmssSS or yyyy-MM-d-HH-mm
@@ -53,6 +54,11 @@ object twitterUtils {
       val timestamp: Timestamp = new Timestamp(new DateTime().getMillis)
       val date = new Date(timestamp.getTime)
       val simpleFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm")
+      simpleFormat.format(date)
+    }else if (mode == sec){
+      val timestamp: Timestamp = new Timestamp(new DateTime().getMillis)
+      val date = new Date(timestamp.getTime)
+      val simpleFormat = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss")
       simpleFormat.format(date)
     }else{
       System.exit(1)
@@ -159,6 +165,7 @@ object TwitterEReputation {
           println("The rdd is empty!")
         } else {
           println("----------------------------------------------------------------------------")
+          new PrintWriter(new File("/var/www/html/guiR/data/stream.txt")){write(rdd.take(5).mkString("-"+currentDate(sec)+"/////")+"-"+currentDate(sec)+"/////");close()}
           rdd.foreachPartition(iteration => {
             val config = HBaseConfiguration.create()
             config.set(TableInputFormat.INPUT_TABLE, hbaseTwitterBaseDate)
@@ -172,7 +179,6 @@ object TwitterEReputation {
                 .replaceAll("http[^\\s]+", "")
                 //Regexp to delete emojis in tweets
                 .replaceAll("[^\u0000-\uFFFF]", "")
-
               //Deleting stop characters
               val tweetWords = tweetModified.split("[\\[\\]\\s:,;'.<>=“+‘’!?\\-/*@#|&()»❤⛽️️–✅\"]+")
               //Deleting stop words

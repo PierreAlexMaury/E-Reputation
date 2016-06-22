@@ -3,9 +3,7 @@
 abafado
 abalar
 abandonado
-abandonado
 abandonar
-abatido
 abatido
 abatidos
 abatimento
@@ -17,19 +15,13 @@ abjurar
 abolir
 abominar
 abominavelmente
-abominavelmente
 abominação
 abominável
 abordar
 aborrecedor
 aborrecer
 aborrecido
-aborrecido
-aborrecido
-aborrecido
 aborrecimento
-aborrecimento
-aborrecimentos
 aborrecimentos
 aborta
 abortado
@@ -43,24 +35,18 @@ absentista
 absurdamente
 absurdness
 absurdo
-absurdo
-absurdo
-absurdo
 abusado
 abusivo
-abuso
 abuso
 abusos
 abysmally
 abóbora
-acanhado
 acanhado
 acariciar
 acerbamente
 acerbic
 achey
 acidental
-acidente
 acidente
 acidentes
 acre
@@ -72,14 +58,12 @@ acrimônia
 acusa
 acusador
 acusar
-acusar
 acusatoriamente
 acusação
 acusações
 admitiu
 admoestador
 admoestar
-admoestação
 admoestação
 admonishingly
 adoecer
@@ -88,7 +72,6 @@ adular
 adular servilmente
 adulterado
 adulterar
-adulterar
 adulteração
 adulterier
 adversarial
@@ -96,14 +79,7 @@ adversidade
 adverso
 adversário
 afligir
-afligir
-afligir
-afligir
 aflitivo
-aflitivo
-aflição
-aflição
-aflição
 aflição
 afogamento
 afronta
@@ -116,7 +92,6 @@ aggrivation
 agitada
 agitado
 agitar
-agitação
 agitação
 agonia
 agonias
@@ -146,13 +121,10 @@ alegar
 alegação
 alegações
 aleijado
-aleijado
 aleijados
 alergia
 alergias
 algaravia
-algaravia
-alienado
 alienado
 alienar
 alienação
@@ -167,7 +139,6 @@ aluno que mata aula
 alvoroço
 alérgico
 amaldiçoado
-amaldiçoado
 amante
 amarfanhar
 amargamente
@@ -180,12 +151,7 @@ ambivalente
 ambivalência
 ambíguo
 ameaça
-ameaça
 ameaçador
-ameaçador
-ameaçador
-ameaçador
-ameaçadoramente
 ameaçadoramente
 ameaçar
 ameaças
@@ -208,7 +174,6 @@ anomalia
 anormal
 anormalmente
 ansiedade
-ansiedade
 ansiedades
 ansiosamente
 ansioso
@@ -228,14 +193,11 @@ antiamericano
 antieconômico
 antinatural
 antipatia
-antipatia
-antiquado
 antiquado
 antitético
 antiéticos
 anular
 anárquico
-anão
 anão
 anêmico
 anômalo
@@ -253,7 +215,6 @@ apologistas
 apreensivamente
 apreensivo
 apreensão
-apreensão
 apreensões
 apregoados
 aprisionamento
@@ -261,8 +222,6 @@ aprisionar
 aproveitador
 apuro
 apático
-apático
-arbitrário
 arbitrário
 arcaico
 ardente
@@ -277,7 +236,6 @@ armadilha
 arpão
 arranhar
 arranhões
-arranhões
 arrasta
 arrastada
 arrastar
@@ -287,15 +245,11 @@ arrepender
 arrependimentos
 arrepiante
 arrepio
-arrepio
 arriscado
-arrogante
 arrogante
 arrogantemente
 arrogância
-arrogância
 arruda
-arruinado
 arruinado
 arruinando
 artifício
@@ -306,15 +260,10 @@ asinino
 aspersions
 aspersão
 assaltar
-assaltar
 assalto
 assassinado
 assassinar
 assassinato
-assassino
-assassino
-assassino
-assassino
 assassino
 assediado
 assedie
@@ -325,20 +274,12 @@ assombro
 assult
 assustada
 assustador
-assustador
-assustador
-assustador
 assustadora
 assustadoramente
-assustadoramente
-assustar
-assustar
-assustar
 assustar
 assédio
 assédio moral
 astuciosamente
-astuto
 astuto
 astúcia
 ataque
@@ -351,11 +292,6 @@ atormentado
 atraente
 atrair
 atrasado
-atrasado
-atrasado
-atrasado
-atraso
-atraso
 atraso
 atrasos
 atrito
@@ -371,7 +307,6 @@ audaciosamente
 audacioso
 audiciously
 audácia
-audácia
 austero
 ausência
 auto-humilhação
@@ -383,18 +318,14 @@ autoderrotado
 autodestrutivo
 autogolpe
 autoritário
-autoritário
 avalanche
 avaramente
 avarento
 avareza
 avaro
 aversão
-aversão
-aversão
 aviltamento
 aviltante
-aviltar
 aviltar
 aviso
 avisou
@@ -418,27 +349,19 @@ balbuciante
 balbuciar
 banal
 banalizar
-banalizar
-bandido
 bandido
 bandidos
 banimento
 banir
-banir
 baratear
 barato
-barato
-barbaramente
 barbaramente
 barbaridade
 barulhento
-barulhento
-barulho
 barulho
 bashed
 bastardos
 bater
-batida
 batida
 beco sem saída
 beicinho
@@ -446,21 +369,16 @@ beijoca
 beliche
 belicosamente
 belicoso
-belicoso
-beligerante
 beligerante
 beligerância
 berrante
-berrante
 besta
 besteira
-bestial
 bestial
 bewilderingly
 bitchy
 bitingly
 bizantino
-bizarro
 bizarro
 blah
 blasfemar
@@ -472,9 +390,7 @@ bloqueios de estradas
 bluring
 blurt
 boato
-boato
 bobo
-bocejar
 bocejar
 bode expiatório
 boicote
@@ -489,12 +405,10 @@ boquiabertos
 borrada
 borrar
 borrão
-borrão
 borrões
 bragger
 brando
 brashness
-bravata
 bravata
 brazenness
 break-ups
@@ -507,18 +421,12 @@ brinquedo
 bronco
 bruscamente
 brusco
-brusco
-brusco
-brutal
 brutal
 brutalidade
 brutalidades
 brutalizar
 brutalização
-brutalização
 brutalmente
-bruto
-bruto
 bruto
 bruxa
 bs
@@ -535,24 +443,16 @@ burro
 busto
 bustos
 bárbaro
-bárbaro
-bárbaro
 bélica
 bélico
-bêbado
-bêbado
 bêbado
 cabeça-dores
 cacarejo
 cadela
-cadela
 caduco
 caindo
 cair
-cair
 cair fora
-cair fora
-caiu
 caiu
 calamidade
 calamidades
@@ -568,26 +468,17 @@ calumnious
 calumniously
 caluniador
 caluniar
-caluniar
 caluniosamente
 calunioso
 calúnia
-calúnia
-calúnia
-calúnias
 calúnias
 cambalhota
 campanha publicitária
-canalha
 canalha
 canceroso
 canibal
 canibalizar
 cansado
-cansado
-cansado
-cansativo
-cansativo
 cansativo
 cansaço
 caos
@@ -599,18 +490,13 @@ carece
 carente
 careta
 caricatura
-caricatura
 carnificina
-carnificina
-caro
 caro
 carpa
-carranca
 carranca
 cartoonish
 caseoso
 cash-strapped
-castigar
 castigar
 castigo
 castrado
@@ -623,7 +509,6 @@ cataclísmico
 catastroficamente
 catastrófico
 catástrofe
-catástrofes
 catástrofes
 causticamente
 cautela
@@ -638,7 +523,6 @@ cederam
 cegando
 cego
 celerado
-censura
 censura
 censurável
 cerca viva
@@ -666,18 +550,11 @@ chicanar
 chicotes
 chiqueiro
 chocado
-chocado
 chocalho
-chocalho
-chocante
 chocante
 chocantemente
 choque
-choque
 choramingar
-choramingar
-choramingar
-chorar
 chorar
 cicatriz
 cicatrizes
@@ -688,13 +565,10 @@ ciosamente
 circinal
 ciúmes
 clamor
-clamor
 clamoroso
-clichê
 clichê
 coagir
 cobiçoso
-coceira
 coceira
 coercivo
 coerção
@@ -722,7 +596,6 @@ complacente
 completamente
 complexo
 complicado
-complicado
 complicação
 compulsivo
 compulsão
@@ -735,14 +608,9 @@ concessão
 concessões
 condena
 condenado
-condenado
-condenado
 condenar
 condenatório
 condenação
-condenação
-condenável
-condenável
 condenável
 condescendente
 condescender
@@ -757,23 +625,10 @@ confissões
 conflito
 conflitos
 conflituosa
-conflituosa
-confronto
 confronto
 confunde
 confundir
-confundir
-confundir
 confuso
-confuso
-confuso
-confuso
-confuso
-confuso
-confusão
-confusão
-confusão
-confusão
 confusão
 confusões
 congela
@@ -789,7 +644,6 @@ conservador
 conservador de linha dura
 conspicuamente
 conspirador
-conspirar
 conspirar
 conspiratório
 conspiração
@@ -809,16 +663,11 @@ contender
 contenção
 continue
 contorcer
-contorcer
 contorcer-se
 contorções
 contraditório
-contraditório
-contraditório
-contradizer
 contradizer
 contradição
-contraproducente
 contraproducente
 contrariedade
 contras
@@ -831,27 +680,19 @@ contusões
 coração partido
 coração pesado
 corroer
-corroer
 corrompe
 corrosivo
 corrosão
 corrosões
-corrupto
 corrupto
 corruptora
 corruptted
 corrupção
 corrói
 cortante
-cortante
-cortar
 cortar
 cortina de fumaça
 covarde
-covarde
-covarde
-covarde
-covardemente
 covardemente
 coxear
 coxo
@@ -861,18 +702,13 @@ crepitar
 crime
 criminal
 criminoso
-criminoso
 cringes
 crise
-crise
 criticada
-criticar
 criticar
 cronyism
 crowdedness
 cruel
-cruel
-crueldade
 crueldade
 crueldades
 crueler
@@ -881,17 +717,12 @@ cruelmente
 cruelness
 crumples
 crédulo
-crédulo
 crítica
 críticas
-críticas
-crítico
 crítico
 críticos
 crônica
 culpa
-culpa
-culpado
 culpado
 culposamente
 culpável
@@ -903,10 +734,7 @@ cáustico
 câncer
 cãibra
 cético
-cético
-cético
 cínico
-cólicas
 cólicas
 cômico
 cúmplices
@@ -921,7 +749,6 @@ de baixa qualidade
 de curta duração
 de esquerda
 de má vontade
-de má vontade
 de pesadelo
 de qualidade inferior
 de última hora
@@ -933,10 +760,8 @@ debilidade
 debilitado
 debilitante
 debilitar
-debilitar
 decadente
 decadência
-decair
 decair
 deceitfully
 decepciona
@@ -948,26 +773,20 @@ declamar
 declinante
 declive
 declínio
-declínio
 declínios
 decrepitude
 decrépito
 defasada
 defasagens
 defeito
-defeito
 defeitos
-defeituoso
 defeituoso
 defensiva
 deficiente
 deficientes
 deficiência
-deficiência
-deficiências
 deficiências
 definhar
-deformado
 deformado
 deformar
 defraudar
@@ -984,33 +803,26 @@ dejectedly
 delinquente
 delinquência
 delirante
-delirante
-delirante
 delírio
 delírios
 demitido
 demitir
 demolidor
 demolir
-demolir
 demoniza
 demonizado
 demonização
-demoníaco
 demoníaco
 demora
 demorado
 demoralizingly
 demônio
-demônio
-denegrir
 denegrir
 denso
 dentado
 dente
 denteado
 dents
-denunciar
 denunciar
 denúncia
 denúncias
@@ -1024,15 +836,12 @@ depravar
 depravedly
 deprecar
 depreciar
-depreciar
-depreciativo
 depreciativo
 depressão
 depressões
 deprimente
 deprimentemente
 deprimido
-deprimir
 deprimir
 derem errado
 derisively
@@ -1045,13 +854,10 @@ desabrochado
 desaceleração
 desacelerações
 desacordo
-desacordo
 desacostumado
-desacreditar
 desacreditar
 desafeiçoar
 desafeto
-desafiador
 desafiador
 desafiadoramente
 desafiar
@@ -1061,50 +867,26 @@ desafogar
 desagradar
 desagradavelmente
 desagradável
-desagradável
-desagradável
-desagradável
-desagradável
-desagradável
-desagradável
-desagradável
-desajeitado
-desajeitado
-desajeitado
-desajeitado
-desajeitado
 desajeitado
 desajustamento
 desalinhada
 desalinhado
 desalinhar
 desamparado
-desamparado
 desamparo
 desanimada
 desanimado
-desanimado
-desanimador
 desanimador
 desanimar
-desanimar
-desapontado
-desapontado
 desapontado
 desapontador
 desapontamento
 desaprovar
-desaprovar
-desaprovar
-desaprovação
-desaprovação
 desaprovação
 desarmar
 desastrado
 desastre
-desastre
 desastrosamente
-desastroso
 desastroso
 desatenciosos
 desatento
@@ -1113,38 +895,24 @@ desbotado
 descamação
 descanse em paz
 descaradamente
-descaradamente
-descaradamente
 descarado
 descaramento
 descascado
 descolados
 descompor
 desconcertado
-desconcertado
-desconcertante
-desconcertante
 desconcertante
 desconcertantemente
-desconcertar
 desconcertar
 desconexo
 desconfiadamente
 desconfiado
-desconfiado
-desconfiado
-desconfiado
-desconfiado
 desconfiando
-desconfiança
-desconfiança
 desconfiança
 desconfortavelmente
 desconforto
 desconfortável
 desconhecedor
-desconhecido
-desconhecido
 desconhecido
 desconsiderado
 desconsoladamente
@@ -1152,10 +920,6 @@ desconsolado
 desconsolo
 descontenta
 descontentamento
-descontentamento
-descontentamento
-descontente
-descontente
 descontente
 descontinuidade
 descontroladamente
@@ -1167,23 +931,16 @@ descrença
 descrer
 descrédito
 descuidado
-descuidado
 descuido
 descuidos
-desculpa
 desculpa
 desculpas
 desdenhava
 desdenhosamente
-desdenhosamente
-desdenhosamente
-desdenhoso
-desdenhoso
 desdenhoso
 desdém
 deselegante
 deselegância
-desempregado
 desempregado
 desencaminhar
 desencorajadoramente
@@ -1197,11 +954,7 @@ deserto
 deserção
 desesperada
 desesperadamente
-desesperadamente
-desesperadamente
 desesperado
-desespero
-desespero
 desespero
 desestabilização
 desfavor
@@ -1212,24 +965,17 @@ desfeito
 desfigurado
 desfiladeiro
 desgosto
-desgosto
 desgostos
 desgostoso
-desgostoso
-desgraça
 desgraça
 desgraçadamente
 desgraçado
-desgraçado
-desigual
 desigual
 desigualdade
-desigualdades
 desigualdades
 desigualmente
 desiludidos
 desiludir
-desilusão
 desilusão
 desilusões
 desintegra
@@ -1245,7 +991,6 @@ desleal
 deslealdade
 desleixado
 deslocado
-deslocado
 deslocar
 desmaiar
 desmancha-prazeres
@@ -1254,31 +999,23 @@ desmoralizante
 desmoralizar
 desnecessariamente
 desnecessário
-desnecessário
 desnecessários
 desnorteamento
 desobedecer
 desobediente
-desobediente
 desobediência
 desoladamente
-desolado
-desolado
 desolado
 desolador
 desolação
 desonestamente
 desonestidade
 desonesto
-desonesto
 desonra
 desonrado
 desonroso
 desordem
-desordem
 desordenadamente
-desordenado
-desordenado
 desordenado
 desorganizado
 desorientado
@@ -1292,8 +1029,6 @@ desperdiçado
 desperdiçando
 desperdiçar
 desperdício
-desperdício
-desperdício
 despicably
 despistar
 despoiler
@@ -1306,11 +1041,7 @@ despreocupação
 despreparado
 desprezado
 desprezar
-desprezar
 desprezo
-desprezo
-desprezo
-desprezível
 desprezível
 desproporcionado
 desprovido
@@ -1320,7 +1051,6 @@ desrespeitando
 desrespeito
 desrespeitosamente
 desrespeitoso
-desrespeitoso
 dessecada
 dessecar
 desserviço
@@ -1329,31 +1059,21 @@ destituído
 destruidor
 destruidor de corações
 destruir
-destruir
-destruição
-destruição
 destruição
 destrutivo
 desumanidade
 desumanizar
 desumanização
 desumano
-desumano
 desunião
 desvalor
 desvantagem
-desvantagem
-desvantagens
 desvantagens
 desvantajoso
 desvendado
 desviados
 desviar
 desvio
-desvio
-desvio
-desânimo
-desânimo
 desânimo
 deteriorado
 deteriorando
@@ -1363,9 +1083,6 @@ detesta
 detestada
 detestando
 detestar
-detestar
-detestável
-detestável
 detestável
 detração
 detrimento
@@ -1379,16 +1096,12 @@ devastador
 devastadoramente
 devastar
 devastação
-devastação
 deviously
 dia do julgamento
 diabinho
 diabo
 diabolicamente
-diabolicamente
 diabrura
-diabólico
-diabólico
 diabólico
 diamante
 diametralmente
@@ -1396,23 +1109,17 @@ diappointed
 diatribe
 diatribes
 difamar
-difamar
-difamar
 difamatório
 difamação
 difamações
 dificuldade
-dificuldade
-dificuldades
 dificuldades
 dificultada
 dificultar
 difícil
-difícil
 dignar-se
 dilapidado
 dilatória
-dilema
 dilema
 dilúvio
 diminuindo
@@ -1444,7 +1151,6 @@ discriminação
 discurso retórico
 discussão
 discutível
-discutível
 discórdia
 disgustfully
 dishearteningly
@@ -1463,8 +1169,6 @@ dispensa-happy
 dispensável
 dispiriting
 disputa
-disputa
-disputa
 disputado
 disputas
 disputável
@@ -1479,9 +1183,7 @@ dissensão
 dissention
 disses
 dissidente
-dissidente
 dissidentes
-dissidência
 dissidência
 dissimulador
 dissimular
@@ -1491,7 +1193,6 @@ dissolução
 dissonante
 dissonância
 dissuadir
-dissuadir
 dissuasivo
 distains
 distante
@@ -1499,7 +1200,6 @@ distastefully
 distorce
 distorcer
 distorcida
-distorção
 distorção
 distrair
 distraughtly
@@ -1514,34 +1214,23 @@ dividido
 divisionista
 divisora
 divisão
-divisão
 dizzing
 dizzingly
 dobrado
 dodgey
 doendo
 doente
-doente
 doentio
-doentio
-doença
-doença
-doença
 doença
 dogmático
 dolorido
 dolorosamente
-dolorosamente
 doloroso
-dominar
 dominar
 donside
 dor
-dor
-dor
 dor de cabeça
 dor lombar
-dores
 dores
 dores de cabeça
 dores nas costas
@@ -1576,7 +1265,6 @@ dureza
 duro de matar
 duvidosamente
 duvidoso
-duvidoso
 débil
 déspota
 dívida
@@ -1594,14 +1282,12 @@ egotismo
 egotisticamente
 egoísmo
 egoísta
-egoísta
 egregiously
 egrégio
 eleição-rigger
 eletrocutado
 eliminação
 em falta
-em pânico
 em pânico
 em vão
 emaciado
@@ -1611,7 +1297,6 @@ emaranhamento
 emaranhar
 embaralha
 embaraçar
-embaraço
 embaraço
 embaraçosamente
 embaraçoso
@@ -1634,10 +1319,7 @@ endurecido
 enervado
 enervante
 enervar
-enervar
 enfadar
-enfadonho
-enfadonho
 enfadonho
 enfaticamente
 enfeitar
@@ -1652,23 +1334,11 @@ enfurecido
 enfurecidos
 enfático
 enganado
-enganado
-enganado
-enganado
-enganador
-enganador
 enganador
 enganadores
 enganando
 enganar
-enganar
-enganar
-enganar
-enganar
-enganar
-enganar
 enganação
-engano
 engano
 enganosamente
 enganoso
@@ -1684,8 +1354,6 @@ enlouquecer
 enraging
 enredado
 enredar
-enredar
-enredo
 enredo
 enrugada
 ensaboado
@@ -1708,25 +1376,17 @@ enérgicas
 epidemia
 equimose
 equívoco
-equívoco
-equívoco
 equívocos
 ermo
 erosão
 erradamente
 errado
-errado
 errante
 errar
 erraticamente
 erro
-erro
-erro
 erro de cálculo
 erroneamente
-erros
-erros
-erros
 erros
 errático
 errôneo
@@ -1739,18 +1399,12 @@ escamoso
 escandalizar
 escandalizou
 escandalosamente
-escandalosamente
 escandaloso
 escapada
 escapamentos
 escape
 escarnecido
 escassez
-escassez
-escassez
-escassez
-escasso
-escasso
 escasso
 esconder-se
 escorar
@@ -1763,7 +1417,6 @@ escrever rapsódias
 escrúpulos
 escumalha
 escurecer
-escurecer
 escurecido
 escuridão
 escuro
@@ -1773,7 +1426,6 @@ escândalo
 escândalos
 esfarelar
 esfarrapado
-esfarrapado
 esfolar
 esforço
 esgotado
@@ -1782,19 +1434,14 @@ esgueirar-se
 esguio
 esmagado
 esmagador
-esmagador
 esmagadoramente
 esmagamento
 esmagar
 esnobe
-esnobe
-esnobe
 espadelar
 espalhafato
 espalhafatoso
-espalhafatoso
 espancamento
-espancar
 espancar
 espantosamente
 espasmódico
@@ -1809,54 +1456,36 @@ espírito militante
 espúrio
 esquecidas
 esquecido
-esquecido
 esquecimento
 esqueletos
 esquisitice
 esquisitices
 esquisito
 esquivar-se a
-esquivar-se a
 estagnado
 estagnar
 estagnação
-estar latente
 estar latente
 estarolas
 estereotipada
 estereótipo
 estigma
-estigma
 estigmatizar
 estragado
-estragado
-estragado
-estragar
-estragar
-estragar
-estragar
 estragar
 estrangulamento
 estrangular
 estranhamente
-estranhamente
 estranho
-estranho
-estranho
-estranho
-estranho
-estratagema
 estratagema
 estremecimento
 estressante
 estresse
 estridente
-estridente
 estridentemente
 estritamente
 estufa
 estupidamente
-estupidez
 estupidez
 estupor
 estuprado
@@ -1867,7 +1496,6 @@ estático
 estéril
 estúpida
 estúpido
-estúpido
 evadir
 evasivo
 evasão
@@ -1875,20 +1503,12 @@ eviscerar
 evitado
 evitar
 exacerbar
-exacerbar
 exagera
-exagerada
 exagerada
 exagerado
 exagerar
-exagerar
-exagerar
-exagerar
-exagerar
 exagerate
 exagerates
-exagero
-exagero
 exagero
 exasperado
 exasperador
@@ -1899,7 +1519,6 @@ exaustão
 excentricidade
 excessivamente
 excessivo
-excesso
 excesso
 excesso de peso
 exclusão
@@ -1956,12 +1575,7 @@ falaciosamente
 falaz
 falecimento
 falha
-falha
-falha
-falha
 falhar
-falhas
-falhas
 falhas
 falho
 falhou
@@ -1971,16 +1585,9 @@ falsidade
 falsificar
 falsificação
 falso
-falso
-falso
-falso
-falta
-falta
-falta
 falta
 falta de vontade
 faltava
-falácia
 falácia
 falácias
 faminto
@@ -1988,15 +1595,10 @@ fanaticamente
 fanatismo
 fanatismos
 fanfarrão
-fanfarrão
 fantasma
-fantoche
 fantoche
 fantoches
 fantástico
-fanático
-fanático
-fanático
 fanático
 fanáticos
 farcical-ainda-provocativa
@@ -2014,7 +1616,6 @@ fatal
 fatalista
 fatalisticamente
 fatalmente
-fatalmente
 fatigado
 fatique
 fatuously
@@ -2029,19 +1630,15 @@ febril
 fede
 fedelho
 fedor
-fedor
 feeblely
-feio
 feio
 feiúra
 fel
 felpudo
 fenda
-fenda
 fendas
 ferida
 feridas
-ferido
 ferido
 ferir
 ferocidade
@@ -2050,7 +1647,6 @@ ferozmente
 ferro velho
 ferrugem
 ferrugens
-ferver
 ferver
 fervilhante
 fiasco
@@ -2085,19 +1681,16 @@ fobia
 fofoca
 foge
 fome
-fome
 fora de moda
 foragido
 forebodingly
 forgetfully
-forjado
 forjado
 forlornly
 formação de bolhas
 formigar
 formigava
 formigueiro
-forte
 forte
 fosco
 fracassado
@@ -2111,7 +1704,6 @@ fraqueza
 fraquezas
 fratura
 fraude
-fraude
 fraudes
 fraudulento
 frazzled
@@ -2119,8 +1711,6 @@ freakishly
 frenesi
 frenetically
 freneticamente
-frenético
-frenético
 frenético
 freqüente
 friamente
@@ -2130,8 +1720,6 @@ friggin
 frigging
 frightfully
 frio
-frio
-frio
 frito
 fruitlessly
 frustra
@@ -2140,19 +1728,13 @@ frustrados
 frustrante
 frustrantemente
 frustrar
-frustrar
 frustração
 frustrações
-frágil
-frágil
 frágil
 frígido
 fugaz
 fugindo
 fugir
-fugir
-fugir
-fugitivo
 fugitivo
 fulminar
 fumaça
@@ -2163,8 +1745,6 @@ fundamentos
 funnily
 furado
 furiosamente
-furioso
-furioso
 furioso
 furor
 furos
@@ -2180,7 +1760,6 @@ fútil
 gafe
 gagueja
 gaguejar
-gaguejar
 gaguejou
 gainsayer
 galhas
@@ -2189,8 +1768,6 @@ ganância
 garança
 gasto
 gato gordo
-gato gordo
-gatos gordos
 gatos gordos
 geada
 geléia
@@ -2207,9 +1784,7 @@ glamour
 glitches
 goading
 golpe
-golpe
 golpe duro
-golpeado
 golpeado
 golpistas
 gordinho
@@ -2222,25 +1797,15 @@ gracejar
 gracejo
 gracelessly
 grade
-grade
 granulado
 grato
 gravame
 grave
-grave
 gravemente
-gravemente
-gravidade
 gravidade
 greve
 grito
 grosseiramente
-grosseiro
-grosseiro
-grosseiro
-grosseiro
-grosseiro
-grosseiro
 grosseiro
 grotesco
 gruesomely
@@ -2253,8 +1818,6 @@ guarida
 gueto
 guinada
 guinchando
-guincho
-guincho
 guincho
 guinchos
 gutless
@@ -2292,15 +1855,11 @@ heterodoxo
 hideously
 hiliarious
 hipocrisia
-hipocrisia
 hipocritamente
-hipócrita
-hipócrita
 hipócrita
 hipócritas
 histeria
 histericamente
-histérico
 histérico
 ho-hum
 hoodium
@@ -2311,16 +1870,8 @@ horrifys
 horripilante
 horroriza
 horrorizado
-horrorizado
 horrorizar
 horrível
-horrível
-horrível
-horrível
-horrível
-horrível
-hostil
-hostil
 hostil
 hostilidade
 hostilidades
@@ -2335,10 +1886,6 @@ humilhar
 humilhação
 hurted
 idiota
-idiota
-idiota
-idiota
-idiotas
 idiotas
 idiotia
 idiotically
@@ -2346,37 +1893,26 @@ idiotices
 ignominiosamente
 ignominioso
 ignorante
-ignorante
 ignorar
 ignorância
 ignóbil
 ilegal
-ilegal
-ilegal
-ilegal
-ilegalidade
 ilegalidade
 ilegalmente
-ilegalmente
-ilegítimo
 ilegítimo
 ilegível
 illogic
 ilogicamente
 iludida
 iludir
-iludir
-ilusão
 ilusão
 ilusório
 ilusões
 ilícito
 ilógico
 imaginário
-imaginário
 imaterial
 imaturo
-imbecil
 imbecil
 iminente
 iminentemente
@@ -2392,12 +1928,8 @@ impaciente
 impacientemente
 impaciência
 impasse
-impasse
 impassível
 impedimento
-impedimento
-impedimento
-impedir
 impedir
 impedância
 impenitente
@@ -2418,14 +1950,8 @@ impetuosamente
 impetuoso
 impiedade
 impiedosamente
-impiedosamente
-impiedosamente
-impiedoso
 impiedoso
 implacavelmente
-implacável
-implacável
-implacável
 implacável
 implausibly
 implicar
@@ -2445,15 +1971,10 @@ impossivelmente
 impossível
 impostores
 impotente
-impotente
-impotente
-impraticável
 impraticável
 imprecisamente
 imprecisely
 impreciso
-impreciso
-imprecisão
 imprecisão
 imprecisões
 imprevisto
@@ -2464,17 +1985,9 @@ impropriamente
 impropriedade
 improvavelmente
 improvável
-improvável
-imprudente
-imprudente
-imprudente
-imprudente
-imprudente
 imprudente
 imprudentemente
 imprudência
-imprudência
-impróprio
 impróprio
 impudente
 impudently
@@ -2484,11 +1997,8 @@ impulsivamente
 impulsivo
 impunidade
 impureza
-impureza
 impuro
 imundo
-imundo
-imóvel
 imóvel
 inacabado
 inaceitavelmente
@@ -2496,7 +2006,6 @@ inaceitável
 inacessíveis
 inacessível
 inacreditável
-inadequadamente
 inadequadamente
 inadequação
 inadverent
@@ -2509,7 +2018,6 @@ inapto
 inarticulado
 inatingível
 inativo
-inativo
 inaudível
 inação
 incapably
@@ -2517,18 +2025,15 @@ incapacidade
 incapacitante
 incapacitar
 incapaz
-incapaz
 incendiário
 incenso
 incerto
 incessante
 incessantemente
 inchado
-inchado
 inchaço
 inchou
 incitamento
-incitar
 incitar
 incivil
 incivilidade
@@ -2544,7 +2049,6 @@ incomoda
 incomodada
 incomodados
 incomodando
-incomodar
 incomodar
 incomparavelmente
 incomparável
@@ -2562,7 +2066,6 @@ incompreensível
 incomum
 incomumente
 inconcebivelmente
-inconcebivelmente
 inconcebível
 incongruente
 incongruously
@@ -2573,12 +2076,10 @@ inconsiderado
 inconsiderately
 inconsistence
 inconsistente
-inconsistente
 inconsistência
 inconsistências
 inconsolably
 inconsolável
-inconstante
 inconstante
 inconstitucional
 incontrolável
@@ -2594,34 +2095,23 @@ incrédula
 incrédulo
 inculcar
 incómodo
-incómodo
 indecente
 indecentemente
-indeciso
-indeciso
 indeciso
 indecisão
 indecoroso
 indecência
-indecência
 indefensável
 indefinido
 indelicado
-indelicado
 indesculpável
 indesejável
-indesejável
 indeterminably
-indeterminado
-indeterminado
 indeterminado
 indeterminável
 indevido
 indiferente
-indiferente
-indiferente
 indiferença
-indigente
 indigente
 indigesto
 indignadamente
@@ -2629,13 +2119,10 @@ indignado
 indignação
 indignidade
 indigno
-indigno
 indigência
 indiscernível
 indisciplinado
 indiscreetly
-indiscreto
-indiscreto
 indiscreto
 indiscriminadamente
 indiscriminado
@@ -2648,15 +2135,10 @@ indizível
 indolente
 ineffectualness
 ineficaz
-ineficaz
-ineficaz
-ineficaz
-ineficaz
 ineficazmente
 ineficiente
 ineficientemente
 ineficiência
-ineficácia
 ineficácia
 inelegível
 ineloquent
@@ -2669,8 +2151,6 @@ inescrupulosamente
 inesperadamente
 inesperado
 inevitavelmente
-inevitavelmente
-inevitável
 inevitável
 inexatidão
 inexcusably
@@ -2692,10 +2172,6 @@ infecção
 infecções
 infelicidade
 infeliz
-infeliz
-infeliz
-infeliz
-infelizmente
 infelizmente
 inferior
 inferioridade
@@ -2705,49 +2181,37 @@ infernos
 infestado
 infestar
 infiel
-infiel
 infielmente
 infiltrados
 infiltrator
 infiéis
 inflado
 inflamar
-inflamar
 inflamatório
 inflamação
 inflammed
 inflatório
-inflexível
-inflexível
 inflexível
 infligir
 informar mal
 infortúnio
 infracções
 infrator
-infrator
 infração
-infringir
 infringir
 infrutífero
 infundado
-infundado
-infundado
-infâmia
 infâmia
 ingenuamente
 inglório
 ingratidão
 ingrato
-ingrato
-ingênuo
 ingênuo
 inhospitality
 inibir
 inibição
 inimaginavelmente
 inimaginável
-inimigo
 inimigo
 inimigos
 inimizade
@@ -2756,31 +2220,17 @@ iniquidade
 injuriado
 injuriar
 injustamente
-injustamente
 injustificada
 injustificadamente
-injustificadamente
-injustificável
 injustificável
 injustiça
 injustiças
 injusto
-injusto
 inoperável
 inoportuno
-inoportuno
-inquietante
 inquietante
 inquietantemente
 inquietação
-inquietação
-inquietação
-inquietação
-inquietação
-inquietação
-inquieto
-inquieto
-inquieto
 inquieto
 insaciável
 insanamente
@@ -2788,31 +2238,19 @@ insanidade
 insano
 insatisfeita
 insatisfeito
-insatisfeito
 insegurança
-inseguro
-inseguro
-inseguro
 inseguro
 insensato
 insensibilidade
 insensitively
 insensível
-insensível
-insensível
-insensível
-insensível
 insidiosamente
 insidioso
 insignificante
-insignificante
 insignificantemente
-insignificância
-insignificância
 insignificância
 insinceramente
 insinceridade
-insincero
 insincero
 insinuante
 insinuar
@@ -2821,22 +2259,16 @@ insociable
 insolente
 insolvente
 insolência
-insolência
-insolência
 insolúvel
 insondável
-instabilidade
 instabilidade
 instigador
 instigadores
 instigar
 instável
-instável
-instável
 insubordinado
 insubstancial
 insubstantially
-insuficiente
 insuficiente
 insuficientemente
 insuficiência
@@ -2845,18 +2277,11 @@ insultado
 insultante
 insultingly
 insulto
-insulto
-insultos
 insultos
 insuportavelmente
-insuportavelmente
-insuportável
-insuportável
 insuportável
 insurmountably
 insurreição
-insurreição
-insustentável
 insustentável
 insípido
 intefere
@@ -2870,7 +2295,6 @@ interferir
 interferência
 intermitente
 interpretar mal
-interpretar mal
 interpretação errada
 interromper
 interrompido
@@ -2881,18 +2305,13 @@ intimação
 intimações
 intimidador
 intimidar
-intimidar
-intimidar
-intimidar
 intimidatingly
 intimidação
 intocado
 intolerablely
 intolerável
 intolerância
-intolerância
 intoxicar
-intransigente
 intransigente
 intransigentemente
 intransigência
@@ -2909,8 +2328,6 @@ inundar
 inutilidade
 inutilizável
 inutilmente
-inutilmente
-inutilmente
 invadir
 invalidar
 invalidez
@@ -2918,8 +2335,6 @@ invasivo
 invasor
 invasão
 invectivo
-invejoso
-invejoso
 invejoso
 inventar
 inverossímil
@@ -2934,15 +2349,9 @@ iníquo
 inóspito
 inúteis
 inútil
-inútil
-inútil
-inútil
-ira
 ira
 iradamente
 irado
-irascível
-irascível
 irascível
 irking
 irks
@@ -2952,7 +2361,6 @@ ironia
 ironias
 ironicamente
 irracionais
-irracional
 irracional
 irracionalidade
 irracionalidades
@@ -2967,18 +2375,14 @@ irrecuperável
 irrefletido
 irreformável
 irregular
-irregular
-irregular
 irregularidade
 irrelevante
 irrelevância
 irremediavelmente
 irremediável
 irreparável
-irreparável
 irreplacible
 irreprimível
-irresoluto
 irresoluto
 irresponsavelmente
 irresponsável
@@ -2988,28 +2392,13 @@ irrisório
 irrita
 irritada
 irritado
-irritado
-irritado
-irritante
-irritante
-irritante
-irritante
 irritante
 irritantemente
-irritantemente
-irritantemente
-irritar
-irritar
-irritar
-irritar
 irritar
 irritaram
 irritação
 irritações
 irritável
-irritável
-irritável
-irônico
 irônico
 isca
 isolado
@@ -3040,21 +2429,10 @@ lambast
 lame-duck
 lamentando
 lamentar
-lamentar
-lamentar
-lamentar
-lamentavelmente
-lamentavelmente
-lamentavelmente
-lamentavelmente
 lamentavelmente
 lamentação
 lamento
 lamentou
-lamentável
-lamentável
-lamentável
-lamentável
 lamentável
 lamúria
 langor
@@ -3063,15 +2441,11 @@ languorously
 lapso
 lapsos
 lascivo
-lascivo
-lascivo
-lascívia
 lascívia
 lastimador
 lastimável
 latejante
 latejava
-latente
 latente
 latência
 laughably
@@ -3098,7 +2472,6 @@ licencioso
 licitações fraudulentas
 lier
 limitado
-limitado
 limitação
 limitações
 limite
@@ -3110,10 +2483,6 @@ linha-dura
 litigioso
 lividamente
 lixeira
-lixeira
-lixo
-lixo
-lixo
 lixo
 lixões
 lodo
@@ -3122,12 +2491,7 @@ loquaz
 lorota
 lotado
 loucamente
-loucamente
 louco
-louco
-louco
-loucura
-loucura
 loucura
 lovelorn
 lunaticism
@@ -3143,15 +2507,12 @@ luz difusa
 lânguido
 lívido
 lúgubre
-lúgubre
-macabro
 macabro
 machado
 machucando
 maddeningly
 magro
 mais alto
-mais assustador
 mais assustador
 mais caro
 mais caros
@@ -3161,20 +2522,15 @@ mais escura
 mais estranha
 mais estreito
 mais feio
-mais feio
 mais fraco
 mais grosso
-mais pobres
 mais pobres
 mais sensacionalistas
 mais volumoso
 mal
-mal
-mal
 mal agradecido
 mal ajustado
 mal classificadas
-mal concebida
 mal concebida
 mal definido
 mal entendido
@@ -3186,15 +2542,10 @@ mal-entendidos
 mal-estar
 mal-formado
 mal-humorado
-mal-humorado
-mal-humorado
-malcheiroso
 malcheiroso
 maldade
 maldito
-maldito
 maldizer
-maldição
 maldição
 maldições
 maldosamente
@@ -3205,10 +2556,7 @@ malevolente
 malevolência
 malfeitor
 maliciosamente
-maliciosamente
-maliciosamente
 malicioso
-maligno
 maligno
 maltratada
 maltratado
@@ -3217,33 +2565,23 @@ maluco
 malvado
 malversada
 malícia
-malícia
 mancada
 mancar
 mancha
-mancha
-mancha
-manchada
 manchada
 manchado
 manchando
 manchar
-manchar
-manchas
-manchas
 manchas
 mandrião
 mangles
 mangling
 manhoso
 mania
-mania
 manipuladora
 manipuladores
 manipular
 manipulação
-maníaco
-maníaco
 maníaco
 maquinado
 marginal
@@ -3262,12 +2600,9 @@ mau
 mau comportamento
 mau trato
 maus-tratos
-maus-tratos
 mawkishly
 mediocridade
 medo
-medonho
-medonho
 medonho
 medos
 medrosamente
@@ -3287,7 +2622,6 @@ menosprezada
 menosprezo
 mente fraca
 mentira
-mentira
 mentiras
 mentiroso
 mentirosos
@@ -3295,14 +2629,10 @@ mentiu
 merda
 mesquinharia
 mesquinho
-mesquinho
 messes
 mexidos
 mimado
-mimado
 minado
-minar
-minar
 minar
 minguante
 minúsculo
@@ -3313,7 +2643,6 @@ misdirection
 miserableness
 miseravelmente
 miserável
-miserável
 misgivings
 misjudge
 misleadingly
@@ -3322,11 +2651,9 @@ mispronounce
 mispronounces
 misteriosamente
 misterioso
-misterioso
 mistificar
 mistified
 mistério
-miséria
 miséria
 misérias
 mito
@@ -3335,18 +2662,14 @@ moer
 mofado
 mole
 molestar
-molestar
-molestar
 molestação
 monotonia
 monstro
 monstruosamente
 monstruosidade
-monstruosidade
 monstruosidades
 monstruoso
 montanha russa
-monótono
 monótono
 mordacidade
 mordaz
@@ -3374,11 +2697,9 @@ mudslinging
 muito
 muito tempo
 mulherengo
-mulherengo
 multa
 multi-polarização
 mundano
-murchar
 murchar
 murderously
 murmurar
@@ -3398,30 +2719,23 @@ nauseatingly
 neblina
 nebulosamente
 nebuloso
-nebuloso
 nefariously
 nefasto
 nega
 negado
 negando
 negar
-negar
 negatividade
 negativo
 negativos
 negação
-negação
 negligenciada
 negligenciar
 negligente
-negligente
-negligente
 negligentemente
-negligência
 negligência
 nepotismo
 nervosamente
-nervosismo
 nervosismo
 nervoso
 nettlesome
@@ -3434,7 +2748,6 @@ nitpick
 nocivo
 nodoso
 nonresponsive
-notoriamente
 notoriamente
 notoriedade
 notório
@@ -3454,7 +2767,6 @@ não essencial
 não existente
 não gostei
 não informado
-não qualificado
 não qualificado
 não realizado
 não satisfatório
@@ -3477,7 +2789,6 @@ obnoxiously
 obnóxio
 obscenamente
 obscenidade
-obscenidade
 obsceno
 obscurece
 obscurecer
@@ -3489,8 +2800,6 @@ obsessiveness
 obsessivo
 obsoleto
 obstinadamente
-obstinadamente
-obstinado
 obstinado
 obstrua
 obstruindo
@@ -3512,14 +2821,12 @@ odiava
 odiosamente
 odor
 ofender
-ofender
 ofendido
 ofensa
 ofensas
 ofensiva
 ofensivamente
 ofensividade
-ofensor
 ofensor
 oficioso
 ofuscar
@@ -3528,8 +2835,6 @@ omissão
 omitir
 ondular
 onerosamente
-onerosamente
-oneroso
 oneroso
 opacificação
 oponente
@@ -3541,9 +2846,7 @@ oppressively
 opressivo
 opressores
 opressão
-opressão
 oprimido
-oprimir
 oprimir
 oscilação
 ostentar
@@ -3579,7 +2882,6 @@ paralisado
 paralisar
 paralisação
 paranóia
-paranóia
 parasita
 parcialidade
 parreira
@@ -3593,7 +2895,6 @@ passeio
 passiva
 passividade
 passível
-pateta
 pateta
 pateticamente
 patife
@@ -3616,12 +2917,10 @@ peevishly
 pegajoso
 pelourinho
 pena
-pena
 penalizar
 pendurado
 penetrante
 penetrar
-pequeno
 pequeno
 perda
 perda de cabelo
@@ -3629,7 +2928,6 @@ perdas
 perde
 perdedor
 perdedores
-perder
 perder
 perder-se
 perdido
@@ -3639,43 +2937,21 @@ perfuração
 periclitante
 periculosidade
 perigo
-perigo
-perigo
-perigo
 perigosamente
 perigoso
-perigoso
-perigoso
-pernicioso
 pernicioso
 perplexidade
-perplexidade
-perplexo
-perplexo
 perplexo
 perseguir
 perseguição
 pertinaz
 pertinácia
-pertinácia
 perturbado
-perturbado
-perturbado
-perturbado
-perturbado
-perturbador
-perturbador
-perturbador
 perturbador
 perturbadoramente
-perturbadoramente
-perturbar
-perturbar
-perturbar
 perturbar
 perturbação
 perturbe
-perversamente
 perversamente
 perversidade
 perverso
@@ -3684,7 +2960,6 @@ perverter
 pervertido
 pervertidos
 pesadelo
-pesado
 pesado
 pesarosamente
 pessimismo
@@ -3700,12 +2975,10 @@ petrificar
 petulância
 pia
 picada
-picada
 picante
 picketed
 picuinhas
 pieguice
-pilhagem
 pilhagem
 pingava
 piolhento
@@ -3714,7 +2987,6 @@ piora
 piorar
 piquete
 piquetes
-piquetes
 pisar
 pitada
 plagiar
@@ -3722,7 +2994,6 @@ plasticky
 plebeu
 plotters
 plunderer
-pobre
 pobre
 pobremente
 pobreza
@@ -3743,7 +3014,6 @@ por engano
 porcaria
 porco
 porcos
-porcos
 porra
 portar-se mal
 portos
@@ -3754,61 +3024,41 @@ pouco convincente
 pouco saudável
 poção
 praga
-praga
 pranteador
 pratfall
 precariamente
 precipitadamente
 precipitado
-precipitado
 preconceito
-preconceitos
 preconceitos
 precário
 predatório
 predicamento
 preguiça
 preguiçoso
-preguiçoso
 prejudicada
 prejudicar
-prejudicar
-prejudicial
-prejudicial
-prejudicial
-prejudicial
-prejudicial
 prejudicial
 prejudicou
 prejuízo
 premeditado
 preocupadamente
 preocupado
-preocupado
-preocupante
 preocupante
 preocupantemente
 preocupar
 preocupação
-preocupação
-preocupações
 preocupações
 preparado para combate
 preposterously
 preso
-preso
 pressa
 pressentimento
 presunçosamente
-presunçosamente
-presunçoso
 presunçoso
 presunção
 pretensiosamente
 pretensioso
-pretensioso
-pretensioso
-pretensão
 pretensão
 prevaricar
 prideful
@@ -3816,19 +3066,13 @@ prik
 primitivo
 prisioneiro
 prisão
-prisão
 privado
-privar
 privar
 privação
 problema
-problema
-problemas
-problemas
 problemas
 problemático
 processado
-processar
 processar
 procrastinar
 procrastinates
@@ -3838,7 +3082,6 @@ profanar
 profanidade
 profano
 proibido
-proibir
 proibir
 proibitivamente
 proibitivo
@@ -3858,13 +3101,11 @@ provocante
 provocar
 provocativamente
 provocação
-provocação
 provocações
 pugnacidade
 pulsar
 pungente
 punho
-punir
 punir
 punitivo
 punk
@@ -3879,8 +3120,6 @@ pânico
 pérfido
 pênis
 pôr em perigo
-pôr em perigo
-pôr em perigo
 quarrellous
 quarrellously
 que já passou
@@ -3890,7 +3129,6 @@ que vaza
 quebra
 quebrou
 queda
-queda
 quedas
 queimado
 queimaduras
@@ -3899,7 +3137,6 @@ queixa
 queixando
 queixar-se
 queixaram
-queixas
 queixas
 querelas
 questionável
@@ -3918,18 +3155,14 @@ radical
 radicalização
 radicalmente
 raiva
-raiva
 raked
 ralhando
-ralhar
 ralhar
 ralhou
 rampante
 rancor
-rancor
 rancores
 rancoroso
-ranger
 ranger
 rangido
 rangidos
@@ -3937,7 +3170,6 @@ ranted
 ranting
 rantingly
 rants
-ranzinza
 ranzinza
 rasgado
 raso
@@ -3962,8 +3194,6 @@ recua
 recuo
 recuou
 recusa
-recusa
-recusa
 recusar
 recusou
 redundante
@@ -3972,7 +3202,6 @@ refugo
 refuta
 refutada
 refutante
-refutar
 refutar
 refutação
 refém
@@ -3989,30 +3218,21 @@ rejeição
 relentlessness
 reles
 relutante
-relutante
-relutante
 relutantemente
 relutância
 remorselessly
 remorselessness
 remorso
-remorso
-renegar
 renegar
 renunciar
 renúncia
-renúncia
 repelido
-repelir
 repelir
 repetitivo
 repreenda
 repreender
-repreender
 repreensiva
 repreensivelmente
-repreensão
-repreensão
 repreensão
 repreensível
 repressivo
@@ -4022,23 +3242,15 @@ reprimir
 reprovador
 reprovadora
 repudiar
-repudiar
 repugn
 repugnante
-repugnante
-repugnante
-repugnante
 repugnantemente
-repugnantemente
-repugnantemente
-repugnância
 repugnância
 repulsa
 repulsing
 repulsively
 repulsiveness
 repulsivo
-repúdio
 repúdio
 resignado
 resistência
@@ -4076,17 +3288,12 @@ revoltingly
 revulsivo
 revés
 ridiculamente
-ridiculamente
 ridiculariza
 ridicularizar
 ridículo
-ridículo
-ridículo
-rigidez
 rigidez
 rigidness
 rigorosamente
-rigoroso
 rigoroso
 riscado
 risco
@@ -4096,19 +3303,14 @@ risível
 rival
 rivalidade
 robusto
-robusto
 rochoso
 roer
-rompimento
-rompimento
 rompimento
 rompimentos
 roncar
 rosnar
-rosnar
 rotina
 rotineiro
-roubado
 roubado
 roubando
 roubar
@@ -4122,12 +3324,10 @@ ruidoso
 ruidosos
 ruinoso
 rumores
-rumores
 ruptura
 ruídos
 ruína
 ruínas
-rígido
 rígido
 sabotar
 saciar
@@ -4145,7 +3345,6 @@ sanguinário
 saque
 sarcasmo
 sarcasticamente
-sarcástico
 sarcástico
 sardonicamente
 sardônico
@@ -4173,7 +3372,6 @@ segundo nível
 seiva
 selfinterested
 selvagem
-selvagem
 selvagens
 selvageria
 sem amor
@@ -4184,7 +3382,6 @@ sem esperança
 sem fé
 sem graça
 sem importância
-sem importância
 sem lei
 sem licença
 sem noção
@@ -4192,13 +3389,11 @@ sem objetivo
 sem piedade
 sem seguro
 sem sentido
-sem sentido
 sem significado
 sem sucesso
 sem suporte
 sem utilidade
 sem vergonha
-sem vida
 sem vida
 sem êxito
 semi-retardado
@@ -4210,7 +3405,6 @@ senões
 separadamente
 separar
 separável
-sertão
 sertão
 servidão
 servil
@@ -4227,7 +3421,6 @@ simplificada
 simplificar
 simplificação
 simplista
-simplista
 simulado
 sinalização
 singularmente
@@ -4235,7 +3428,6 @@ sinistramente
 sinistro
 sintoma
 sintomas
-sitiar
 sitiar
 slogged
 slogging
@@ -4262,8 +3454,6 @@ snobs
 so-cal
 sobre-preço
 sobrecarregado
-sobrecarregado
-sobrecarregado
 sobressalto
 sobrevalorização
 soco
@@ -4278,19 +3468,11 @@ solene
 solicitude
 solidão
 solitário
-solitário
-solitário
-solitário
 soltar
 solte-outs
 solteirona
 solto
 soluço
-sombrio
-sombrio
-sombrio
-sombrio
-sombrio
 sombrio
 sordidamente
 sorrateiro
@@ -4343,8 +3525,6 @@ sueing
 sues
 sufocante
 sufocar
-sufocar
-sufocar
 sugado
 sugar
 sugarcoated
@@ -4354,16 +3534,12 @@ suicídio
 sujando
 sujar
 sujeira
-sujeira
 sujeição
-sujo
-sujo
 sujo
 sulcos
 superaquecer
 superestimado
 superfaturada
-superficial
 superficial
 superficialidade
 superficialmente
@@ -4378,27 +3554,18 @@ surdo
 surpreendente
 surto
 suscetível
-suscetível
 suspeita
 suspeitas
-suspeito
 suspeito
 suspiro
 sussurrante
 susto
-susto
 síndrome
-sóbrio
-sóbrio
 sóbrio
 tabu
 taciturno
 tagarela
-tagarela
 tagarelar
-tagarelice
-tagarelice
-tagarelice
 tagarelice
 tamancos
 tamanho desproporcional
@@ -4415,8 +3582,6 @@ tedioso
 teimosamente
 teimosia
 teimoso
-teimoso
-teimoso
 temeridade
 temeroso
 temerário
@@ -4426,9 +3591,6 @@ tempestade
 tenda
 tendenciosa
 tenso
-tenso
-tenso
-tensão
 tensão
 tentativamente
 tentação
@@ -4438,12 +3600,9 @@ ternura
 terribleness
 terrivel
 terrivelmente
-terrivelmente
-terrivelmente
 terror
 terror-gênica
 terrorismo
-terrível
 terrível
 tesouro escondido
 tetchily
@@ -4471,8 +3630,6 @@ torpor
 torrente
 torto
 tortuoso
-tortuoso
-tortuoso
 tortura
 torturados
 torturando
@@ -4489,24 +3646,15 @@ tragicamente
 tragédia
 trai
 traidor
-traidor
-traidor
-traindo
 traindo
 trair
 traiçoeiramente
-traiçoeiramente
 traiçoeiro
-traiçoeiro
-traição
-traição
 traição
 traições
 transgredir
 transgressão
 transsexual
-trapaceiro
-trapaceiro
 trapaceiro
 trapalhão
 trapaça
@@ -4525,16 +3673,11 @@ travestis
 tremulação
 trepidar
 trepidação
-trepidação
 trepidações
 trilho
 trindade
 triste
-triste
-triste
 tristemente
-tristemente
-tristeza
 tristeza
 trivial
 trocadilho
@@ -4546,9 +3689,7 @@ troublesomely
 truque
 trágico
 trêmulo
-trêmulo
 tubarão
-tumulto
 tumulto
 tumultuoso
 turbulento
@@ -4557,7 +3698,6 @@ turvar
 tédio
 ténue
 tépido
-tímido
 tímido
 tóxico
 ugh
@@ -4622,7 +3762,6 @@ urtiga
 usado
 usurpador
 usurpar
-usurpar
 vacilante
 vacilar
 vacilação
@@ -4630,8 +3769,6 @@ vacilou
 vadiar
 vadio
 vagabundas
-vagabundo
-vagabundo
 vagabundo
 vago
 vaias
@@ -4642,9 +3779,6 @@ valete
 variado
 variegado
 vazamento
-vazamento
-vazamento
-vazamentos
 vazamentos
 vazio
 veemente
@@ -4652,16 +3786,11 @@ velho
 velhote
 veneno
 venenosamente
-venenosamente
-venenoso
 venenoso
 vengefully
 vengefulness
 vergonha
-vergonha
 vergonhosamente
-vergonhoso
-vergonhoso
 vergonhoso
 vertiginoso
 vestígios
@@ -4674,14 +3803,12 @@ vibrando
 vibrar
 vibração
 viciado
-viciado
 viciados
 viciante
 viciosamente
 vicioso
 viciousness
 vigoroso
-vil
 vil
 vileza
 vilificar
@@ -4694,19 +3821,13 @@ vilões
 vindictively
 vindictiveness
 vingança
-vingança
 vingar
 vingativamente
-vingativo
-vingativo
 vingativo
 violadores
 violar
 violação
-violação
-violação
 violentamente
-violento
 violento
 viradas
 virar
@@ -4724,8 +3845,6 @@ volúvel
 vomita
 vomitando
 vomitar
-vomitar
-vomitou
 vomitou
 vulgar
 vulnerável
@@ -4752,12 +3871,7 @@ zelosamente
 zeloso
 zombar
 zombaria
-zombaria
-zombaria
-zombaria
 zombarias
-zombeteiramente
-zombeteiramente
 zombeteiramente
 zombeteiro
 zumbi
@@ -4765,18 +3879,11 @@ zumbido
 água-down
 árduo
 áspero
-áspero
-áspero
-áspero
 ávido
 é uma merda
 ímpar
 ímpio
 íngreme
-íngreme
-íngreme
-ódio
-ódio
 ódio
 ódios
 órfão
