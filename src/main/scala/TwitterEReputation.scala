@@ -13,6 +13,7 @@ import java.sql.{Date, Timestamp}
 import org.apache.log4j.Logger
 import org.joda.time.DateTime
 import org.apache.log4j.Level
+import sys.process._
 import twitterUtils._
 
 object twitterUtils {
@@ -166,6 +167,7 @@ object TwitterEReputation {
         } else {
           println("----------------------------------------------------------------------------")
           new PrintWriter(new File("/var/www/html/guiR/data/stream.txt")){write(rdd.take(5).mkString("-"+currentDate(sec)+"/////")+"-"+currentDate(sec)+"/////");close()}
+          "/root/scripts/color.sh".!
           rdd.foreachPartition(iteration => {
             val config = HBaseConfiguration.create()
             config.set(TableInputFormat.INPUT_TABLE, hbaseTwitterBaseDate)
