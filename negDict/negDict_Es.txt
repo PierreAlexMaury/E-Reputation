@@ -735,7 +735,6 @@ cólicos
 cómicamente
 cómico
 cómplices
-d * mn
 dado
 dados
 dañado
@@ -3354,7 +3353,6 @@ servilmente
 sesgos
 severo
 señuelo
-sh * t
 sietemesino
 silbido
 sillily
@@ -3589,7 +3587,6 @@ torceduras
 torcido
 tormento
 tormentoso
-toro****
 toro----
 torpe
 torpeza

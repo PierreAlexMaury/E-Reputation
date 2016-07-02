@@ -738,7 +738,7 @@ cínico
 cólicas
 cômico
 cúmplices
-d * mn
+damn
 danadinho
 danificar
 danos
@@ -1562,7 +1562,6 @@ extremismo
 extremista
 extremistas
 exílio
-f ** k
 fabricar
 fabricação
 faca
@@ -3410,7 +3409,6 @@ servidão
 servil
 severamente
 severo
-sh * t
 shortchange
 sibilante
 sickeningly
@@ -3638,7 +3636,6 @@ torturously
 torção
 torções
 totalitário
-touro****
 touro----
 touts
 trabalho de assassinato
