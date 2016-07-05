@@ -167,7 +167,7 @@ object TwitterEReputation {
         } else {
           println("----------------------------------------------------------------------------")
           new PrintWriter(new File("/var/www/html/guiR/data/stream.txt")){write(rdd.take(5).mkString("-"+currentDate(sec)+"/////")+"-"+currentDate(sec)+"/////");close()}
-          "/root/scripts/color.sh".!
+          Process("/root/scripts/color.sh").run
           rdd.foreachPartition(iteration => {
             val config = HBaseConfiguration.create()
             config.set(TableInputFormat.INPUT_TABLE, hbaseTwitterBaseDate)
