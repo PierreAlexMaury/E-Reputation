@@ -105,7 +105,7 @@ object CalculReputation {
         -> result.eval)~("startDate" -> result.startDate)~("stopDate" -> result.stopDate)
 
       //Print the Json result
-      new PrintWriter(new File("/nfs/results.txt")){write(compact(render(json)));close()}
+      new PrintWriter(new File("/gpfs-fpo/results.txt")){write(compact(render(json)));close()}
 
     } else {
       println("Error: You should precise a type of launching")

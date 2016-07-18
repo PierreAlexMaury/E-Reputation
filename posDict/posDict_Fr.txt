@@ -247,6 +247,7 @@ clair
 claire
 clairement
 close
+cloud
 coeur
 cohérence
 comme
@@ -408,7 +409,6 @@ effusion
 embellir
 empathie
 empressement
-en
 enceintes
 enchantement
 enchanteresse
@@ -473,7 +473,7 @@ exemplaire
 exercicen
 expansif
 experte
-exploiter
+exploit
 expression
 expressivité
 expérience
@@ -1100,6 +1100,7 @@ répit
 réputation
 réputé
 résolument
+résolution
 résultat
 rétractable
 réussi

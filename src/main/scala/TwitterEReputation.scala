@@ -13,6 +13,7 @@ import java.sql.{Date, Timestamp}
 import org.apache.log4j.Logger
 import org.joda.time.DateTime
 import org.apache.log4j.Level
+import sys.process._
 import twitterUtils._
 
 object twitterUtils {
@@ -39,9 +40,10 @@ object twitterUtils {
   //currentDate() utils
   val min: String = "min"
   val ms: String = "ms"
+  val sec: String = "sec"
 
   /**
-    * Function which returns the current date with the String format: yyyyMMddHHmm
+    * Function which returns the current date with the String format: yyyyMMddHHmmssSS or yyyy-MM-d-HH-mm
     */
   def currentDate(mode: String): String = {
     if (mode == ms){
@@ -53,6 +55,11 @@ object twitterUtils {
       val timestamp: Timestamp = new Timestamp(new DateTime().getMillis)
       val date = new Date(timestamp.getTime)
       val simpleFormat = new SimpleDateFormat("yyyy-MM-dd-HH-mm")
+      simpleFormat.format(date)
+    }else if (mode == sec){
+      val timestamp: Timestamp = new Timestamp(new DateTime().getMillis)
+      val date = new Date(timestamp.getTime)
+      val simpleFormat = new SimpleDateFormat("yyyy-MM-dd-HH:mm:ss")
       simpleFormat.format(date)
     }else{
       System.exit(1)
@@ -103,7 +110,7 @@ object TwitterEReputation {
           .set("spark.cores.max","3")
       }
       //Write the keywords in a file
-      new PrintWriter(new File("/nfs/keyWords.txt")){write(args(3).replace(',','\n')+"\n");close()}
+      new PrintWriter(new File("/gpfs-fpo/keyWords.txt")){write(args(3).replace(',','\n')+"\n");close()}
       //Id gives by the user for rowKey in Hbase
       val id = args(2)
       //All words used to filter tweets (given by the user)
@@ -122,21 +129,21 @@ object TwitterEReputation {
       var neg_file = ""
       lang match {
         case language.english =>
-          stopWords = "/nfs/stopWordFiles/stopWord_En.txt"
-          pos_file = "/nfs/posDict/posDict_En.txt"
-          neg_file = "/nfs/negDict/negDict_En.txt"
+          stopWords = "/gpfs-fpo/stopWordFiles/stopWord_En.txt"
+          pos_file = "/gpfs-fpo/posDict/posDict_En.txt"
+          neg_file = "/gpfs-fpo/negDict/negDict_En.txt"
         case language.french =>
-          stopWords = "/nfs/stopWordFiles/stopWord_Fr.txt"
-          pos_file = "/nfs/posDict/posDict_Fr.txt"
-          neg_file = "/nfs/negDict/negDict_Fr.txt"
+          stopWords = "/gpfs-fpo/stopWordFiles/stopWord_Fr.txt"
+          pos_file = "/gpfs-fpo/posDict/posDict_Fr.txt"
+          neg_file = "/gpfs-fpo/negDict/negDict_Fr.txt"
         case language.spanish =>
-          stopWords = "/nfs/stopWordFiles/stopWord_Es.txt"
-          pos_file = "/nfs/posDict/posDict_Es.txt"
-          neg_file = "/nfs/negDict/negDict_Es.txt"
+          stopWords = "/gpfs-fpo/stopWordFiles/stopWord_Es.txt"
+          pos_file = "/gpfs-fpo/posDict/posDict_Es.txt"
+          neg_file = "/gpfs-fpo/negDict/negDict_Es.txt"
         case language.portuguese =>
-          stopWords = "/nfs/stopWordFiles/stopWord_Pt.txt"
-          pos_file = "/nfs/posDict/posDict_Pt.txt"
-          neg_file = "/nfs/negDict/negDict_Pt.txt"
+          stopWords = "/gpfs-fpo/stopWordFiles/stopWord_Pt.txt"
+          pos_file = "/gpfs-fpo/posDict/posDict_Pt.txt"
+          neg_file = "/gpfs-fpo/negDict/negDict_Pt.txt"
       }
       //Definition of a new SparkContext with a given spark config
       val sc = new SparkContext(sparkConf)
@@ -159,6 +166,8 @@ object TwitterEReputation {
           println("The rdd is empty!")
         } else {
           println("----------------------------------------------------------------------------")
+          new PrintWriter(new File("/var/www/html/guiR/data/stream.txt")){write(rdd.take(5).mkString("-"+currentDate(sec)+"/////")+"-"+currentDate(sec)+"/////");close()}
+          Process("/root/scripts/color.sh").run
           rdd.foreachPartition(iteration => {
             val config = HBaseConfiguration.create()
             config.set(TableInputFormat.INPUT_TABLE, hbaseTwitterBaseDate)
@@ -172,7 +181,6 @@ object TwitterEReputation {
                 .replaceAll("http[^\\s]+", "")
                 //Regexp to delete emojis in tweets
                 .replaceAll("[^\u0000-\uFFFF]", "")
-
               //Deleting stop characters
               val tweetWords = tweetModified.split("[\\[\\]\\s:,;'.<>=“+‘’!?\\-/*@#|&()»❤⛽️️–✅\"]+")
               //Deleting stop words

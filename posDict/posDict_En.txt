@@ -312,6 +312,7 @@ charmer
 choice
 clean
 cleanliness
+cloud
 comfort
 comfortable
 comforting
@@ -329,10 +330,12 @@ commitment
 communication
 community
 compassion
+computing
 compassionate
 competent
 competence
 competency
+cognitive
 concentration
 confident
 confidence
@@ -389,9 +392,7 @@ carefree
 centering
 centering meditation
 citizen of mastery
-co
 creating
-co
 creator
 cohesion
 continual stream of syncronicity
@@ -517,7 +518,6 @@ elevate
 elevated
 equanimity
 ease
-of
 mind
 excited anticipation
 extra

@@ -465,7 +465,7 @@ bulkier
 bulkiness
 bulky
 bulkyness
-bull****
+bullshit
 bull----
 bullies
 bullshit
@@ -585,7 +585,6 @@ clique
 clog
 clogged
 clogs
-cloud
 clouding
 cloudy
 clueless
@@ -808,7 +807,7 @@ cussed
 cutthroat
 cynical
 cynicism
-d*mn
+damn
 damage
 damaged
 damages
@@ -1557,7 +1556,7 @@ extremism
 extremist
 extremists
 eyesore
-f**k
+fuck
 fabricate
 fabrication
 facetious
@@ -3762,7 +3761,7 @@ setbacks
 sever
 severe
 severity
-sh*t
+shit
 shabby
 shadowy
 shady
@@ -4780,4 +4779,3 @@ zaps
 zealot
 zealous
 zealously
-zombie
