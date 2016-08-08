@@ -224,7 +224,7 @@ object TwitterEReputation {
             table.close()
             clusterConnection.close()
           })
-          println("Data saved in HBase")
+          println("Data saved in HBase at "+currentDate(sec))
         }
       })
       ssc.start()
